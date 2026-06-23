@@ -64,6 +64,7 @@ Board includes:
 ---
 
 ## 📋 WE USE TRELLO
+
 [![Trello](https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white)](https://trello.com/b/KvdZ117R/%F0%9F%9F%A1team-skater-park-application)
 
 ---
