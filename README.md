@@ -87,3 +87,9 @@ Wireframes, sitemap, and task breakdown in progress.
 
 ## 📄 License
 MIT License 
+
+Todays assigment sync group: 
+-First open -main bransh
+-Open with Visual studdio and make your changes
+-Create a bransh Idesignerse for example 
+-Save to main Administrator 
