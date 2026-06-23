@@ -93,3 +93,13 @@ Todays assigment sync group:
 -Open with Visual studdio and make your changes
 -Create a bransh Idesignerse for example 
 -Save to main Administrator 
+
+Sammanfattning (superkort)
+git checkout main
+git pull
+git checkout -b din-branch
+Gör ändringar
+Commit
+Push
+Skapa Pull Request
+Admin mergar till main
