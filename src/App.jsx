@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import SkateparkDetails from "./pages/SkateparkDetails.jsx";
 import Favorites from "./pages/Favorites.jsx";
 import About from "./pages/About.jsx";
+import Footer from './components/Footer.jsx'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/park/:id" element={<SkateparkDetails />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />
+        {/* <Route path="*" element={<Navigate to="/" />} /> */}
       </Routes>
     </BrowserRouter>
   );
