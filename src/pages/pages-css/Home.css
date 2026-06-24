@@ -1,0 +1,35 @@
+#hero{
+    display: flex;
+    text-align: left;
+}
+#hero-Text{
+    width: 50%;
+    margin: 0 2%;
+}
+#popular-Skateparks{
+    width: 50%;
+    margin: 0 2%;
+}
+
+#welcome-Text{
+    font-size: 2.3rem;
+    line-height: 1;
+}
+
+#browse-Skateparks{
+    margin: 3rem 2rem;
+
+    justify-content: center;
+}
+#browse-Skateparks-text{
+    text-align: left;
+}
+
+#more-Parks{
+    height: 2.2rem;
+    width: 9rem;
+    margin-top: 1.5rem;
+
+    background-color: rgba(192, 192, 192, 0.2);
+    color: rgb(255, 255, 255);
+}
