@@ -1,0 +1,27 @@
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  border-top: 2px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  padding: 2.5rem 1.5rem;
+  font-family: var(--headings);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.footer p::before { content: '🛹 '; }
+.footer_github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 1rem;
+  color: var(--muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.2s ease;
+}
+.footer_github:hover { color: var(--volt); }
+.footer_github svg { display: block; }
