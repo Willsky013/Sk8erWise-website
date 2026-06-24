@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Restrooms"
+  },
+  {
+    "id": 2,
+    "name": "Lighting"
+  },
+  {
+    "id": 3,
+    "name": "Shops Nearby"
+  },
+  {
+    "id": 4,
+    "name": "Beach Access"
+  },
+  {
+    "id": 5,
+    "name": "Café"
+  },
+  {
+    "id": 6,
+    "name": "Bike Racks"
+  },
+  {
+    "id": 7,
+    "name": "Water Fountains"
+  },
+  {
+    "id": 8,
+    "name": "Shaded Areas"
+  },
+  {
+    "id": 9,
+    "name": "Seating Areas"
+  },
+  {
+    "id": 10,
+    "name": "Scenic Viewpoints"
+  },
+  {
+    "id": 11,
+    "name": "Public Transport Access"
+  },
+  {
+    "id": 12,
+    "name": "First Aid Station"
+  },
+  {
+    "id": 13,
+    "name": "Parking"
+  },
+  {
+    "id": 14,
+    "name": "Skate Shop"
+  }
+]
