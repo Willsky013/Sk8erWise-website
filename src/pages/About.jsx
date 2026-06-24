@@ -15,7 +15,7 @@ export default function About() {
         </div>
         <div className="about_card">
           <h3>Plan</h3>
-          <p>Get info about features, difficulty, and more..</p>
+          <p>Get info about features, difficulty, and more.</p>
         </div>
         <div className="about_card">
           <h3>Save</h3>
