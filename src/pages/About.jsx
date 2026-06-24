@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <div className="section about">
-      <h1>About sk8erWise</h1>
+      <h1>About Sk8erWise</h1>
       <p>
         Sk8terWise is your travel companion for discovering the best
         skateparks around the world. Whether you're looking for legendary
