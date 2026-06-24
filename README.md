@@ -70,12 +70,12 @@ Board includes:
 ---
 
 ## 🧑‍🤝‍🧑 Team Roles
-- ** Product Owner** – vision, priorities, acceptance criteria  / Darlynna
-- ** UX/UI Lead ** – wireframes, layout, responsive design  / Haidar
-- ** Frontend/Backend Developers** – pages, components, filters, modal  / All of us! 
-- ** Teach Lead ** – API, database, reviews, search logic  / William
-- ** QA /  Lead** – testing, quality / Jöar
-- ** Delivery Lead** – testing, quality, sprint tracking  / Heber
+- **Product Owner** – vision, priorities, acceptance criteria  / Darlynna
+- **UX/UI Lead** – wireframes, layout, responsive design  / Haidar
+- **Frontend/Backend Developers** – pages, components, filters, modal  / All of us! 
+- **Teach Lead** – API, database, reviews, search logic  / William
+- **QA /  Lead** – testing, quality / Joar
+- **Delivery Lead** – testing, quality, sprint tracking  / Heber
 
 ---
 
@@ -93,13 +93,3 @@ Todays assigment sync group:
 -Open with Visual studdio and make your changes
 -Create a bransh Idesignerse for example 
 -Save to main Administrator 
-
-Sammanfattning (superkort)
-git checkout main
-git pull
-git checkout -b din-branch
-Gör ändringar
-Commit
-Push
-Skapa Pull Request
-Admin mergar till main
