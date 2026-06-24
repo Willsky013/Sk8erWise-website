@@ -9,7 +9,7 @@ import Footer from './components/Footer.jsx'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
 
       <Routes>
@@ -17,8 +17,10 @@ export default function App() {
         <Route path="/park/:id" element={<SkateparkDetails />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="*" element={<Navigate to="/" />} /> */}
+
       </Routes>
-    </BrowserRouter>
+
+      <Footer />
+    </>
   );
 }
