@@ -1,0 +1,92 @@
+[
+  {
+    "id": 101,
+    "name": "Venice Beach Skatepark",
+    "country": "USA",
+    "city": "Los Angeles",
+    "difficulty": "Intermediate",
+    "images": [
+      "/images/parks/venice/main.jpg",
+      "/images/parks/venice/1.jpg",
+      "/images/parks/venice/2.jpg"
+    ],
+    "description": "A legendary beachfront skatepark known for bowls, rails, and a vibrant skate culture.",
+    "amenities": ["Restrooms", "Beach Access", "Shops Nearby", "Lighting"],
+    "rating": 4.7
+  },
+  {
+    "id": 102,
+    "name": "Stapelbäddsparken",
+    "country": "Sweden",
+    "city": "Malmö",
+    "difficulty": "Advanced",
+    "images": [
+      "/images/parks/stapelbadd/main.jpg",
+      "/images/parks/stapelbadd/1.jpg",
+      "/images/parks/stapelbadd/2.jpg"
+    ],
+    "description": "One of Europe’s largest concrete skateparks with deep bowls and technical street sections.",
+    "amenities": ["Café", "Lighting", "Bike Racks", "Restrooms"],
+    "rating": 4.8
+  },
+  {
+    "id": 103,
+    "name": "Southbank Skate Space",
+    "country": "UK",
+    "city": "London",
+    "difficulty": "Intermediate",
+    "images": [
+      "/images/parks/southbank/main.jpg",
+      "/images/parks/southbank/1.jpg",
+      "/images/parks/southbank/2.jpg"
+    ],
+    "description": "Historic underground skate spot with graffiti-covered walls and iconic ledges.",
+    "amenities": ["Shops Nearby", "Lighting", "Public Transport"],
+    "rating": 4.5
+  },
+  {
+    "id": 104,
+    "name": "Parque Madureira",
+    "country": "Brazil",
+    "city": "Rio de Janeiro",
+    "difficulty": "Beginner",
+    "images": [
+      "/images/parks/madureira/main.jpg",
+      "/images/parks/madureira/1.jpg",
+      "/images/parks/madureira/2.jpg"
+    ],
+    "description": "A colorful, family-friendly skatepark with smooth transitions and open areas for beginners.",
+    "amenities": ["Water Fountains", "Restrooms", "Shaded Areas"],
+    "rating": 4.3
+  },
+  {
+    "id": 105,
+    "name": "The Berrics Public Plaza",
+    "country": "USA",
+    "city": "Los Angeles",
+    "difficulty": "Advanced",
+    "images": [
+      "/images/parks/berrics/main.jpg",
+      "/images/parks/berrics/1.jpg",
+      "/images/parks/berrics/2.jpg"
+    ],
+    "description": "A street-style plaza inspired by The Berrics with rails, stairs, and technical obstacles.",
+    "amenities": ["Lighting", "Shops Nearby"],
+    "rating": 4.6
+  },
+  {
+    "id": 106,
+    "name": "Pura Pura Skatepark",
+    "country": "Bolivia",
+    "city": "La Paz",
+    "difficulty": "Intermediate",
+    "images": [
+      "/images/parks/purapura/main.jpg",
+      "/images/parks/purapura/1.jpg",
+      "/images/parks/purapura/2.jpg"
+    ],
+    "description": "A high-altitude skatepark with scenic mountain views and a mix of bowls and street features.",
+    "amenities": ["Restrooms", "Seating Areas", "Scenic Viewpoints"],
+    "rating": 4.4
+  }
+]
