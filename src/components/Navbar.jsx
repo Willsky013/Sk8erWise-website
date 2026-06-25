@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ParkSearch from './ParkSearch.jsx'
 import './components-css/Navbar.css'
 
 function Navbar() {
@@ -36,7 +37,9 @@ function Navbar() {
           <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
         </li>
       </ul>
+      <ParkSearch className="nav-search" placeholder="Search parks..." />      
     </nav>
+    
   );
 }
 
