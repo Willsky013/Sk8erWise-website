@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ParkSearch from './ParkSearch.jsx'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +41,9 @@ function Navbar() {
           </Link>
         </li>
       </ul>
+      <ParkSearch className="nav-search" placeholder="Search parks..." />      
     </nav>
+    
   );
 }
 
