@@ -4,9 +4,23 @@
   --bg: #fff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
+
+  /* accents */
+  --volt: #ccff00;
+  --volt-deep: #a6d000;
+  --flame: #ff3b1f;  
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
+  --muted: #8c8c9a;
+
+      /* surfaces */
+  --asphalt: #0b0b0c;
+  --concrete: #15151a;
+  --concrete-2: #1c1c23;
+  --line: #2c2c36;
+  --paper: #f4f1e6;
+
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
@@ -14,6 +28,8 @@
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
+
+  --radius: 4px;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -108,4 +124,19 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #111;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
 }
