@@ -9,18 +9,17 @@ import Footer from './components/Footer.jsx'
 
 export default function App() {
   return (
-    <>
+    <div className="app">
       <Navbar />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/park/:id" element={<SkateparkDetails />} />
-        <Route path="/favorites" element={<Favorites />} />
-        <Route path="/about" element={<About />} />
-
-      </Routes>
-
+      <main className="app_main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/park/:id" element={<SkateparkDetails />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -1,0 +1,42 @@
+[
+  {
+    "country": "Sweden",
+    "cities": ["Malmö", "Stockholm", "Västerås"]
+  },
+  {
+    "country": "United States",
+    "cities": ["Los Angeles", "San Diego", "Portland"]
+  },
+  {
+    "country": "Brazil",
+    "cities": ["São Paulo", "Rio de Janeiro", "Curitiba"]
+  },
+  {
+    "country": "Australia",
+    "cities": ["Melbourne", "Sydney", "Gold Coast"]
+  },
+  {
+    "country": "Spain",
+    "cities": ["Barcelona", "Madrid", "Málaga"]
+  },
+  {
+    "country": "France",
+    "cities": ["Paris", "Lyon", "Marseille"]
+  },
+  {
+    "country": "Germany",
+    "cities": ["Berlin", "Munich", "Cologne"]
+  },
+  {
+    "country": "Canada",
+    "cities": ["Vancouver", "Toronto", "Montreal"]
+  },
+  {
+    "country": "Japan",
+    "cities": ["Tokyo", "Osaka", "Yokohama"]
+  },
+  {
+    "country": "United Kingdom",
+    "cities": ["London", "Manchester", "Bristol"]
+  }
+]

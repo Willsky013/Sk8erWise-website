@@ -1,6 +1,15 @@
+import { useState } from "react";
+
 import './pages-css/Home.css'
+import DropdownFilter from '../components/FilterButton'
 
 export default function Home() {
+
+  const [filters, setFilters] = useState({
+  country: "",
+  city: ""
+  });
+
   return (
     <main className="home">
 
@@ -19,14 +28,22 @@ export default function Home() {
       </section>
 
       <div id="browse-Skateparks">
+
         <h2 id="browse-Skateparks-text">Browse Skateparks</h2>
+        
+        <div className="filters">
+          <DropdownFilter type="country" setFilters={setFilters}/>
+          <DropdownFilter type="city" setFilters={setFilters}/>
+        </div>
 
 
 
-        <button id='more-Parks'>
-          Explore more parks 🡻
-        </button>
       </div>
+
+      <button id='more-Parks'>
+          Explore more parks 🡻
+      </button>
+
     </main>
   )
 }

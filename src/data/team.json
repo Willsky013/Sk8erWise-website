@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Darlynna",
+    "role": "Product Owner",
+    "image": "/images/team/avatar-lynna.jpg",
+    "bio": "Ensures the team delivers value and keeps the project aligned with user needs."
+  },
+  {
+    "id": 2,
+    "name": "Haidar",
+    "role": "UX/UI Lead",
+    "image": "/images/team/avatar-hai.jpg",
+    "bio": "Designs user-friendly interfaces and maintains the visual identity of Sk8erWise."
+  },
+  {
+    "id": 3,
+    "name": "William",
+    "role": "Tech Lead",
+    "image": "/images/team/avatar-wil.jpg",
+    "bio": "Oversees technical decisions, architecture, and code quality across the project."
+  },
+  {
+    "id": 4,
+    "name": "Jöar",
+    "role": "QA Lead",
+    "image": "/images/team/avatar-jo.jpg",
+    "bio": "Responsible for testing, quality assurance, and ensuring a bug-free experience."
+  },
+  {
+    "id": 5,
+    "name": "Heb",
+    "role": "Delivery Lead",
+    "image": "/images/team/avatar-heb.jpg",
+    "bio": "Coordinates workflow, ensures timely delivery, and supports the team across tasks."
+  }
+]
