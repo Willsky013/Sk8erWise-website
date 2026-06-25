@@ -1,0 +1,88 @@
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+
+.navbar {
+  width: 100%;
+  border-bottom: 2px solid var(--border);
+  background: var(--bg);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--heading);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-h);
+  box-sizing: border-box;
+}
+
+/* ------------------------------
+   LOGO
+   ------------------------------ */
+.navbar_logo a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-h);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar_logo a:hover {
+  color: var(--accent);
+}
+
+/* ------------------------------
+   NAV LINKS
+   ------------------------------ */
+.navbar_links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar_links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.78rem;
+  transition: color 0.2s ease;
+}
+
+.navbar_links a:hover {
+  color: var(--accent);
+}
+
+/* ------------------------------
+   MOBILE MENU BUTTON
+   ------------------------------ */
+.navbar_toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1.5rem;
+  color: var(--text-h);
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+@media (max-width: 768px) {
+  .navbar_links {
+    display: none;
+  }
+
+  .navbar_links--open {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.5rem 0;
+    border-top: 2px solid var(--border);
+    margin-top: 1rem;
+  }
+
+  .navbar_toggle {
+    display: block;
+  }
+}

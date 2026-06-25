@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ParkSearch from './ParkSearch.jsx'
+import './components-css/Navbar.css'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,34 +12,29 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
+      {/* LOGO */}
+      <div className="navbar_logo">
         <Link to="/">Sk8erWise</Link>
       </div>
 
-      <button className="navbar-toggle" onClick={toggleMenu}>
+      {/* MOBILE MENU BUTTON */}
+      <button className="navbar_toggle" onClick={toggleMenu}>
         ☰
       </button>
 
-      <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
+      {/* NAV LINKS */}
+      <ul className={`navbar_links ${isOpen ? "navbar_links--open" : ""}`}>
         <li>
-          <Link to="/" onClick={() => setIsOpen(false)}>
-            Home
-          </Link>
+          <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
         </li>
         <li>
-          <Link to="/parks" onClick={() => setIsOpen(false)}>
-            Parks
-          </Link>
+          <Link to="/parks" onClick={() => setIsOpen(false)}>Parks</Link>
         </li>
         <li>
-          <Link to="/favorites" onClick={() => setIsOpen(false)}>
-            Favorites
-          </Link>
+          <Link to="/favorites" onClick={() => setIsOpen(false)}>Favorites</Link>
         </li>
         <li>
-          <Link to="/about" onClick={() => setIsOpen(false)}>
-            About
-          </Link>
+          <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
         </li>
       </ul>
       <ParkSearch className="nav-search" placeholder="Search parks..." />      
