@@ -1,26 +1,55 @@
-import '../components-css/Popularskateparks.css';
+import { useState } from "react";
+import '../components-css/PopularSkateparks.css'
+
+const featuredParks = [
+
+];
 
 export default function PopularSkateparks() {
+  
+    const [start, setStart] = useState(0);
+
+  const visibleParks = featuredParks.slice(start, start + 3);
+
   return (
-    <section id="popular-Skateparks">
+    <div id="popular-Skateparks">
       <h2>Popular Skateparks</h2>
 
-      <div className="popular-card">
-        <img
-          src="./Skatepark-images/Venice Beach 1.jpg"
-          alt="Venice Skate Park"
-          className="popular-image"
-        />
+      <div className="carousel">
+        <button
+          className="prev"
+          onClick={() => setStart((s) => Math.max(s - 1, 0))}
+        >
+          &#10094;
+        </button>
 
-        <div className="popular-info">
-          <h3>Venice Skate Park</h3>
-          <p>Venice, Italy</p>
+        <div className="cards">
+          {visibleParks.map((park) => (
+            <PopularSkateparkCard key={park.id} park={park} />
+          ))}
+        </div>
 
-          <span className="difficulty-badge">Intermediate</span>
+        <button
+          className="next"
+          onClick={() =>
+            setStart((s) => Math.min(s + 1, featuredParks.length - 3))
+          }
+        >
+          &#10095;
+        </button>
 
-          <div className="rating">★★★★☆</div>
+        <div className="dots">
+        {featuredParks.map((_, index) => (
+            <button
+            key={index}
+            className={`dot ${index === start ? "active" : ""}`}
+            onClick={() => {
+                setStart(Math.min(index, featuredParks.length - 3));
+            }}
+            />
+        ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
