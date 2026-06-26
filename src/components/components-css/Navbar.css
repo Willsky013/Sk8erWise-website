@@ -15,6 +15,7 @@
   letter-spacing: 0.08em;
   color: var(--text-h);
   box-sizing: border-box;
+  flex-wrap: nowrap; /* Prevents layout collapse */
 }
 
 /* ------------------------------
@@ -39,6 +40,13 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar_links li {
+  list-style: none;
 }
 
 .navbar_links a {
@@ -56,7 +64,7 @@
    MOBILE MENU BUTTON
    ------------------------------ */
 .navbar_toggle {
-  display: none;
+  display: none; /* Hidden on desktop */
   background: none;
   border: none;
   cursor: pointer;
@@ -65,24 +73,40 @@
   color: var(--text-h);
 }
 
+/* ------------------------------
+   SEARCH BAR IN NAV
+   ------------------------------ */
+.nav-search {
+  margin-left: 2rem;
+}
+
 /* ============================================================
    MOBILE
    ============================================================ */
 @media (max-width: 768px) {
-  .navbar_links {
-    display: none;
+  /* Show hamburger */
+  .navbar_toggle {
+    display: block;
   }
 
-  .navbar_links--open {
-    display: flex;
+  /* Hide nav links by default */
+  .navbar_links {
+    display: none;
     flex-direction: column;
     gap: 1.25rem;
-    padding: 1.5rem 0;
+    width: 100%;
+    padding-top: 1rem;
     border-top: 2px solid var(--border);
     margin-top: 1rem;
   }
 
-  .navbar_toggle {
-    display: block;
+  /* Show when menu is open */
+  .navbar_links--open {
+    display: flex;
+  }
+
+  /* Hide search bar on mobile (optional) */
+  .nav-search {
+    display: none;
   }
 }
