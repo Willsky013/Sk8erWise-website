@@ -50,7 +50,7 @@
 }
 
 .about h1{
-  font-family: var(--display);
+  font-family: var(--sans);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.005em;
