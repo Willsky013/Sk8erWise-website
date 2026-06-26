@@ -2,9 +2,10 @@
     display: flex;
     text-align: left;
 }
-#hero-Text{
-    width: 50%;
-    margin: 0 2%;
+
+#hero-Text {
+  width: 50%;
+  margin:  0;
 }
 #popular-Skateparks{
     width: 50%;
