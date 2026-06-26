@@ -1,0 +1,50 @@
+/* ===========================
+   POPULAR SKATEPARKS SECTION
+   =========================== */
+
+#popular-Skateparks {
+    width: 50%;
+    margin: 0 2%;
+}
+
+/* Card container */
+.popular-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Image */
+.popular-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Text content */
+.popular-info h3 {
+    margin: 0.5rem 0 0.2rem;
+}
+
+.popular-info p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Difficulty badge */
+.difficulty-badge {
+    display: inline-block;
+    background: #333;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin: 6px 0;
+    font-size: 0.8rem;
+}
+
+/* Star rating */
+.rating {
+    color: gold;
+    font-size: 1.1rem;
+}
