@@ -1,7 +1,17 @@
+::selection { background: var(--volt); color: #000; }
+
 .park-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
     justify-items: center;
     padding: 1rem 0;
+}
+.park-grid-empty {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
 }
