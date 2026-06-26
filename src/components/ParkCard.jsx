@@ -1,4 +1,4 @@
-import "./ParkCard.css"
+import "./components-css/ParkCard.css"
 
 export default function ParkCard( {park} ) {
 
