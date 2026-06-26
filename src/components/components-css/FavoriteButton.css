@@ -1,0 +1,15 @@
+/* ============================================================
+   FAVORITE BUTTON
+   ============================================================ */
+.fav-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+.fav-btn:hover { transform: scale(1.2) rotate(8deg); color: var(--volt); }
+.fav-btn.is-active { color: var(--volt); }
+.fav-btn.is-active:hover { color: var(--flame); }

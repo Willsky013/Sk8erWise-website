@@ -1,4 +1,6 @@
+import ParkGrid from '../ParkGrid';
 import '../components-css/Browseskateparks.css';
+
 
 export default function BrowseSkateparks({
   filters,
@@ -25,6 +27,12 @@ export default function BrowseSkateparks({
         <DropdownFilter type="country" setFilters={setFilters} />
         <DropdownFilter type="city" setFilters={setFilters} />
       </div>
+
+      {/* PARK GRID  */} 
+      <section className="section">
+        <h2>Browse Skateparks</h2>
+        <ParkGrid parks={filtered} />
+      </section>      
 
       <button id="more-Parks">
         Explore more parks 🡻
