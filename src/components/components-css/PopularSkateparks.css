@@ -1,50 +1,84 @@
-/* ===========================
-   POPULAR SKATEPARKS SECTION
-   =========================== */
-
-#popular-Skateparks {
+#popular-Skateparks{
     width: 50%;
+    height: 20rem;
     margin: 0 2%;
 }
 
-/* Card container */
-.popular-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    padding: 1rem;
-    margin-top: 1rem;
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-/* Image */
-.popular-image {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
+.cards {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
 }
 
-/* Text content */
-.popular-info h3 {
-    margin: 0.5rem 0 0.2rem;
+.prev,
+.next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  height: auto;
+  border: none;
+  background: transparent;
+  color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(220, 220, 220, 0.6);
+  color: #ffffff;
+}
+.prev:disabled,
+.next:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+.prev:disabled:hover,
+.next:disabled:hover {
+  background: transparent;
+  color: transparent;
 }
 
-.popular-info p {
-    margin: 0;
-    opacity: 0.8;
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
 }
-
-/* Difficulty badge */
-.difficulty-badge {
-    display: inline-block;
-    background: #333;
-    padding: 4px 10px;
-    border-radius: 6px;
-    margin: 6px 0;
-    font-size: 0.8rem;
+.dot {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: #d3d3d3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
 }
-
-/* Star rating */
-.rating {
-    color: gold;
-    font-size: 1.1rem;
+.dot:hover {
+  background: #a8a8a8;
+}
+.dot.active {
+  background: #333;
+  transform: scale(1.2);
 }
