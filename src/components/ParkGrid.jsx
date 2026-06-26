@@ -1,7 +1,7 @@
 import ParkCard from "./ParkCard";
 import "./components-css/ParkGrid.css";
 
-function ParkGrid({ parks = [], loading = false }) {
+function ParkGrid({ parks, emptyMessage = 'No parks match your search.', loading = false }) {
   if (loading) {
     return (
       <section className="park-grid">
@@ -10,14 +10,9 @@ function ParkGrid({ parks = [], loading = false }) {
     );
   }
 
-  if (parks.length === 0) {
-    return (
-      <section className="park-grid-empty">
-        <h2>No skateparks found 🛹</h2>
-        <p>Try changing your search or filters.</p>
-      </section>
-    );
-  }
+  if (!parks.length) {
+    return <p className="park-grid-empty">{emptyMessage}</p>
+  }  
 
   return (
     <section className="park-grid">
