@@ -1,6 +1,6 @@
-import "./Card.css"
+import "./ParkCard.css"
 
-export default function Card( {park} ) {
+export default function ParkCard( {park} ) {
 
     park = {
     image: "src/assets/hero.png",
