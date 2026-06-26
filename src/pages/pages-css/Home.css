@@ -1,10 +1,11 @@
-#hero{
-    display: flex;
-    text-align: left;
+#hero {
+  display: block;
+  text-align: left;
 }
-#hero-Text{
-    width: 50%;
-    margin: 0 2%;
+
+#hero-Text {
+  max-width: 520px;
+  margin: 0 0 2rem 0;
 }
 #popular-Skateparks{
     width: 50%;
