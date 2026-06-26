@@ -1,4 +1,5 @@
 import ParkCard from "./ParkCard";
+import "./components-css/ParkGrid.css";
 
 function ParkGrid({ parks = [], loading = false }) {
   if (loading) {
