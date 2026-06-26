@@ -4,6 +4,7 @@ import ParkSearch from '../components/ParkSearch.jsx'
 import './pages-css/Home.css'
 import DropdownFilter from '../components/FilterButton'
 import { useFilteredParks } from '../hooks/useParks.js'
+import PopularSkateparks from "../components/PopularSkateparks.jsx";
 
 export default function Home() {
 
@@ -28,11 +29,9 @@ export default function Home() {
           <p>Find, explore and save your favorites</p>
 
         </div>
-        <div id="popular-Skateparks">
-          <h2>Popular Skateparks</h2>
 
+        <PopularSkateparks />
 
-        </div>
       </section>
 
       <div id="browse-Skateparks">
