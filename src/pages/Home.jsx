@@ -1,59 +1,49 @@
 import { useState } from "react";
-import { useSearchParams } from 'react-router-dom'
-import ParkSearch from '../components/ParkSearch.jsx'
-import './pages-css/Home.css'
-import DropdownFilter from '../components/FilterButton'
-import { useFilteredParks } from '../hooks/useParks.js'
+import { useSearchParams } from "react-router-dom";
+
+import ParkSearch from "../components/ParkSearch.jsx";
+import DropdownFilter from "../components/FilterButton.jsx";
+import { useFilteredParks } from "../hooks/useParks.js";
+
+import HeroSection from "../components/home/HeroSection.jsx";
+import PopularSkateparks from "../components/home/PopularSkateparks.jsx";
+import BrowseSkateparks from "../components/home/BrowseSkateparks.jsx";
+
+import "./pages-css/Home.css";
 
 export default function Home() {
-
   const [filters, setFilters] = useState({
-  country: "",
-  city: ""
+    country: "",
+    city: "",
   });
-  
-  //for search bar
-  const [searchParams] = useSearchParams()
-  const query = searchParams.get('q') ?? ''
-  const [type, setType] = useState(null)
-  const filtered = useFilteredParks(query, { type })
+
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get("q") ?? "";
+
+  const [type, setType] = useState(null);
+  const filtered = useFilteredParks(query, { type });
 
   return (
     <main className="home">
 
-      <section id="hero">
-        <div id="hero-Text">
-          <h1 id='welcome-Text'>Discover the best skateparks around the world</h1>
-          <p>Your travel guide to amazing skateparks.</p>
-          <p>Find, explore and save your favorites</p>
-
-        </div>
-        <div id="popular-Skateparks">
-          <h2>Popular Skateparks</h2>
-
-
-        </div>
-      </section>
-
-      <div id="browse-Skateparks">
-
-        <h2 id="browse-Skateparks-text">Browse Skateparks</h2>
-        
-        <ParkSearch className="hero-search" instant placeholder="Search by name, city or country..." />
-        
-        <div className="filters">
-          <DropdownFilter type="country" setFilters={setFilters}/>
-          <DropdownFilter type="city" setFilters={setFilters}/>
-        </div>
-
-
-
+      {/* DESKTOP LAYOUT FIX — both components inside #hero */}
+      <div id="hero">
+        <HeroSection />
+        <PopularSkateparks />
       </div>
 
-      <button id='more-Parks'>
-          Explore more parks 🡻
-      </button>
+      {/* BROWSE SECTION */}
+      <BrowseSkateparks
+        filters={filters}
+        setFilters={setFilters}
+        query={query}
+        type={type}
+        setType={setType}
+        filtered={filtered}
+        ParkSearch={ParkSearch}
+        DropdownFilter={DropdownFilter}
+      />
 
     </main>
-  )
+  );
 }
