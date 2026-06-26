@@ -28,9 +28,6 @@ function Navbar() {
           <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
         </li>
         <li>
-          <Link to="/parks" onClick={() => setIsOpen(false)}>Parks</Link>
-        </li>
-        <li>
           <Link to="/favorites" onClick={() => setIsOpen(false)}>Favorites</Link>
         </li>
         <li>
