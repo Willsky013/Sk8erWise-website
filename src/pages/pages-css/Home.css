@@ -1,6 +1,6 @@
-#hero {
-  display: block;
-  text-align: left;
+#hero{
+    display: flex;
+    text-align: left;
 }
 
 #hero-Text {
