@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useSyncExternalStore } from 'react'
 
 const STORAGE_KEY = 'skater-favorites'
 
@@ -12,39 +12,58 @@ function readFavorites() {
   }
 }
 
-// Hook for reading and updating favorites. Stays in sync across components and
-// browser tabs via the `storage` event.
-export function useFavorites() {
-  const [favorites, setFavorites] = useState(readFavorites)
+// A single shared store backs every useFavorites() consumer in the tab, so all
+// FavoriteButtons and the Favorites page render the same list. Without this,
+// each hook instance kept its own stale copy and whole-array writes from one
+// instance silently overwrote another instance's writes.
+let favorites = readFavorites()
+const listeners = new Set()
 
-  // Keep multiple mounted components in sync.
-  useEffect(() => {
-    function handleStorage(e) {
-      if (e.key === STORAGE_KEY) setFavorites(readFavorites())
+function emit() {
+  for (const listener of listeners) listener()
+}
+
+function subscribe(listener) {
+  listeners.add(listener)
+  return () => listeners.delete(listener)
+}
+
+function getSnapshot() {
+  return favorites
+}
+
+function setFavorites(next) {
+  favorites = next
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(next))
+  emit()
+}
+
+// Keep the store in sync with changes made in other browser tabs.
+if (typeof window !== 'undefined') {
+  window.addEventListener('storage', (e) => {
+    if (e.key === STORAGE_KEY) {
+      favorites = readFavorites()
+      emit()
     }
-    window.addEventListener('storage', handleStorage)
-    return () => window.removeEventListener('storage', handleStorage)
-  }, [])
+  })
+}
 
-  const persist = useCallback((next) => {
+// Hook for reading and updating favorites. All consumers share one store, so a
+// toggle in any component is reflected everywhere immediately.
+export function useFavorites() {
+  const list = useSyncExternalStore(subscribe, getSnapshot)
+
+  const isFavorite = useCallback((parkId) => list.includes(parkId), [list])
+
+  const toggleFavorite = useCallback((parkId) => {
+    // Re-read the current store value rather than closing over a snapshot, so
+    // a stale render can never clobber a favorite added elsewhere.
+    const current = favorites
+    const next = current.includes(parkId)
+      ? current.filter((id) => id !== parkId)
+      : [...current, parkId]
     setFavorites(next)
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(next))
   }, [])
 
-  const isFavorite = useCallback(
-    (parkId) => favorites.includes(parkId),
-    [favorites],
-  )
-
-  const toggleFavorite = useCallback(
-    (parkId) => {
-      const next = favorites.includes(parkId)
-        ? favorites.filter((id) => id !== parkId)
-        : [...favorites, parkId]
-      persist(next)
-    },
-    [favorites, persist],
-  )
-
-  return { favorites, isFavorite, toggleFavorite }
+  return { favorites: list, isFavorite, toggleFavorite }
 }
