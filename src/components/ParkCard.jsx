@@ -24,7 +24,9 @@ export default function ParkCard({ park }) {
     return(
     <div className = "parkCard">
         <FavoriteButton parkId={park.id} />
-        <img src = {park.images[0]} alt = "Här ska kortet sitta" className = "parkImage" />
+        <img 
+        src={`${import.meta.env.BASE_URL}${park.images[0].replace(/^\//, "")}`} 
+        alt = "Här ska kortet sitta" className = "parkImage" />
         <h2>{park.name}</h2>
         <h3>{park.city}, {park.country}</h3>
         <div className = "inforow">
