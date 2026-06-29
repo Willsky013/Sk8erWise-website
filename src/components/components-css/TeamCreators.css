@@ -1,0 +1,55 @@
+/* ============================================================
+   TEAM CREATORS
+   ============================================================ */
+
+.team_creators {
+  margin: 3rem 0;
+  text-align: left;
+}
+
+.team_creators h2 {
+  font-family: var(--sans);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 1.4rem;
+}
+
+.team_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.1rem;
+}
+
+.team_card {
+  background: var(--concrete);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  transition: transform 0.22s ease, border-color 0.22s ease;
+}
+
+.team_card:hover {
+  transform: translateY(-4px);
+  border-color: var(--volt);
+}
+
+.team_avatar {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 0.8rem;
+}
+
+.team_role {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0.4rem 0;
+}
+
+.team_bio {
+  font-size: 0.95rem;
+  color: var(--muted);
+}

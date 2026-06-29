@@ -1,6 +1,6 @@
 import "./pages-css/About.css";
-import AboutFeatures from "../components/about/AboutFeatures.jsx";
-import TeamCreators from "../components/about/TeamCreators.jsx";
+import AboutFeatures from "../components/AboutFeatures.jsx";
+import TeamCreators from "../components/TeamCreators.jsx";
 
 export default function About() {
   return (
