@@ -8,7 +8,7 @@ import Parks from "../../data/parks.json";
 export default function PopularSkateparks() {
 
   const featuredParks = Parks.filter(
-  (park) => [101, 102, 103].includes(Number(park.id))
+  (park) => [115, 107, 106].includes(Number(park.id))
   );
 
   console.log(featuredParks);
