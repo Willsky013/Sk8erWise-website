@@ -6,9 +6,9 @@
     "city": "Los Angeles",
     "difficulty": "Intermediate",
     "images": [
-      "/images/parks/venice/main.jpg",
-      "/images/parks/venice/1.jpg",
-      "/images/parks/venice/2.jpg"
+      "/Skatepark-images/VeniceBeach-1.jpg",
+      "/Skatepark-images/VeniceBeach-2.jpg",
+      "/Skatepark-images/VeniceBeach-3.jpg"
     ],
     "description": "A legendary beachfront skatepark known for bowls, rails, and a vibrant skate culture.",
     "amenities": ["Restrooms", "Beach Access", "Shops Nearby", "Lighting"],
@@ -21,9 +21,9 @@
     "city": "Malmö",
     "difficulty": "Advanced",
     "images": [
-      "/images/parks/stapelbadd/main.jpg",
-      "/images/parks/stapelbadd/1.jpg",
-      "/images/parks/stapelbadd/2.jpg"
+      "/Skatepark-images/Stapeln-1.jpg",
+      "/Skatepark-images/Stapeln-1.jpg",
+      "/Skatepark-images/Stapeln-2.jpg"
     ],
     "description": "One of Europe’s largest concrete skateparks with deep bowls and technical street sections.",
     "amenities": ["Café", "Lighting", "Bike Racks", "Restrooms"],
@@ -36,9 +36,9 @@
     "city": "London",
     "difficulty": "Intermediate",
     "images": [
-      "/images/parks/southbank/main.jpg",
-      "/images/parks/southbank/1.jpg",
-      "/images/parks/southbank/2.jpg"
+      "/Skatepark-images/HouseOfVans-1.webp",
+      "/Skatepark-images/HouseOfVans-2.jpg",
+      "/Skatepark-images/HouseOfVans-3.jpg"
     ],
     "description": "Historic underground skate spot with graffiti-covered walls and iconic ledges.",
     "amenities": ["Shops Nearby", "Lighting", "Public Transport"],
@@ -51,9 +51,9 @@
     "city": "Rio de Janeiro",
     "difficulty": "Beginner",
     "images": [
-      "/images/parks/madureira/main.jpg",
-      "/images/parks/madureira/1.jpg",
-      "/images/parks/madureira/2.jpg"
+      "/Skatepark-images/Aljada-1.jpeg",
+      "/Skatepark-images/Aljada-2.jpg",
+      "/Skatepark-images/Aljada-3.jpg"
     ],
     "description": "A colorful, family-friendly skatepark with smooth transitions and open areas for beginners.",
     "amenities": ["Water Fountains", "Restrooms", "Shaded Areas"],
@@ -66,9 +66,9 @@
     "city": "Los Angeles",
     "difficulty": "Advanced",
     "images": [
-      "/images/parks/berrics/main.jpg",
-      "/images/parks/berrics/1.jpg",
-      "/images/parks/berrics/2.jpg"
+      "/Skatepark-images/Vancouver-1.jpg",
+      "/Skatepark-images/Vancouver-2.jpg",
+      "/Skatepark-images/Vancouver-3.jpg"
     ],
     "description": "A street-style plaza inspired by The Berrics with rails, stairs, and technical obstacles.",
     "amenities": ["Lighting", "Shops Nearby"],
@@ -81,9 +81,9 @@
     "city": "La Paz",
     "difficulty": "Intermediate",
     "images": [
-      "/images/parks/purapura/main.jpg",
-      "/images/parks/purapura/1.jpg",
-      "/images/parks/purapura/2.jpg"
+      "/Skatepark-images/Galit-1.jpg",
+      "/Skatepark-images/Galit-2.JPG",
+      "/Skatepark-images/Galit-3.jpg"
     ],
     "description": "A high-altitude skatepark with scenic mountain views and a mix of bowls and street features.",
     "amenities": ["Restrooms", "Seating Areas", "Scenic Viewpoints"],

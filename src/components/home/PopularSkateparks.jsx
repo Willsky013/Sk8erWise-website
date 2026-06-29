@@ -1,42 +1,19 @@
 import { useState } from "react";
 import '../components-css/PopularSkateparks.css'
-import ParkCard from "../ParkCard.jsx";
+import ParkGrid from "../ParkGrid.jsx";
+import Parks from "../../data/parks.json";
 
-const featuredParks = [
-  {
-    id: 1,
-    image: "/src/assets/hero.png",
-    title: "Central Skatepark",
-    country: "Sweden",
-    city: "Stockholm",
-    level: "Intermediate",
-    rating: "4.5"
-  },
-  {
-    id: 2,
-    image: "/src/assets/hero.png",
-    title: "Street Park",
-    country: "Sweden",
-    city: "Uppsala",
-    level: "Beginner",
-    rating: "4.0"
-  },
-  {
-    id: 3,
-    image: "/src/assets/hero.png",
-    title: "Concrete Bowl",
-    country: "Sweden",
-    city: "Malmö",
-    level: "Advanced",
-    rating: "4.8"
-  }
-];
+
 
 export default function PopularSkateparks() {
-  
-    const [start, setStart] = useState(0);
 
-  const visiblePark = featuredParks[start];
+  const featuredParks = Parks.filter(
+  (park) => [101, 102, 103].includes(Number(park.id))
+  );
+
+  console.log(featuredParks);
+  
+  const [start, setStart] = useState(0);
 
   return (
     <div id="popular-Skateparks">
@@ -55,9 +32,9 @@ export default function PopularSkateparks() {
 
         <div className="cards">
           {featuredParks[start] && (
-            <ParkCard 
+            <ParkGrid 
               key={featuredParks[start].id}
-              park={featuredParks[start]}
+              parks={[featuredParks[start]]}
             />
           )}
         </div>
@@ -75,7 +52,7 @@ export default function PopularSkateparks() {
 
       </div>
 
-      {/* Adds dots under the parkcard showing how many the are in 'featuredParks' and the one your on */}
+      {/* Adds dots under the parkGrid showing how many the are in 'featuredParks' and the one your on */}
 
       <div className="dots">
       {featuredParks.map((_, index) => (
