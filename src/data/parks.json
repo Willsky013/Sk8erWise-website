@@ -1,5 +1,5 @@
 [
-  {
+ {
     "id": 101,
     "name": "Venice Beach Skatepark",
     "country": "USA",
@@ -10,7 +10,7 @@
       "/Skatepark-images/VeniceBeach-2.jpg",
       "/Skatepark-images/VeniceBeach-3.jpg"
     ],
-    "description": "A legendary beachfront skatepark known for bowls, rails, and a vibrant skate culture.",
+    "description": "A legendary beachfront skatepark featuring flowing bowls, rails, and endless ocean views. Popular with locals and professional skaters alike.",
     "amenities": ["Restrooms", "Beach Access", "Shops Nearby", "Lighting"],
     "rating": 4.7
   },
@@ -22,16 +22,16 @@
     "difficulty": "Advanced",
     "images": [
       "/Skatepark-images/Stapeln-1.jpg",
-      "/Skatepark-images/Stapeln-1.jpg",
-      "/Skatepark-images/Stapeln-2.jpg"
+      "/Skatepark-images/Stapeln-2.jpg",
+      "/Skatepark-images/Stapeln-3.jpg"
     ],
-    "description": "One of Europe’s largest concrete skateparks with deep bowls and technical street sections.",
+    "description": "One of Europe's largest concrete skateparks, offering massive bowls, technical street lines, and competition-level obstacles.",
     "amenities": ["Café", "Lighting", "Bike Racks", "Restrooms"],
     "rating": 4.8
   },
   {
     "id": 103,
-    "name": "Southbank Skate Space",
+    "name": "House of Vans London",
     "country": "UK",
     "city": "London",
     "difficulty": "Intermediate",
@@ -40,53 +40,188 @@
       "/Skatepark-images/HouseOfVans-2.jpg",
       "/Skatepark-images/HouseOfVans-3.jpg"
     ],
-    "description": "Historic underground skate spot with graffiti-covered walls and iconic ledges.",
-    "amenities": ["Shops Nearby", "Lighting", "Public Transport"],
-    "rating": 4.5
+    "description": "An iconic indoor skatepark beneath Waterloo Station featuring bowls, mini ramps, street obstacles, and a vibrant graffiti-covered atmosphere.",
+    "amenities": ["Indoor Park", "Lighting", "Restrooms", "Public Transport"],
+    "rating": 4.6
   },
   {
     "id": 104,
-    "name": "Parque Madureira",
-    "country": "Brazil",
-    "city": "Rio de Janeiro",
+    "name": "Aljada Skate Park",
+    "country": "United Arab Emirates",
+    "city": "Sharjah",
     "difficulty": "Beginner",
     "images": [
       "/Skatepark-images/Aljada-1.jpeg",
       "/Skatepark-images/Aljada-2.jpg",
       "/Skatepark-images/Aljada-3.jpg"
     ],
-    "description": "A colorful, family-friendly skatepark with smooth transitions and open areas for beginners.",
-    "amenities": ["Water Fountains", "Restrooms", "Shaded Areas"],
-    "rating": 4.3
+    "description": "A modern outdoor skatepark with smooth concrete, beginner-friendly flow lines, and street features suitable for all skill levels.",
+    "amenities": ["Water Fountains", "Lighting", "Restrooms", "Parking"],
+    "rating": 4.5
   },
   {
     "id": 105,
-    "name": "The Berrics Public Plaza",
-    "country": "USA",
-    "city": "Los Angeles",
+    "name": "Leeside Skatepark",
+    "country": "Canada",
+    "city": "Vancouver",
     "difficulty": "Advanced",
     "images": [
       "/Skatepark-images/Vancouver-1.jpg",
       "/Skatepark-images/Vancouver-2.jpg",
       "/Skatepark-images/Vancouver-3.jpg"
     ],
-    "description": "A street-style plaza inspired by The Berrics with rails, stairs, and technical obstacles.",
-    "amenities": ["Lighting", "Shops Nearby"],
-    "rating": 4.6
+    "description": "A legendary DIY concrete skatepark built beneath a bridge, known for its creative transitions, bowls, and authentic skate culture.",
+    "amenities": ["Lighting", "Parking", "Seating Areas"],
+    "rating": 4.7
   },
   {
     "id": 106,
-    "name": "Pura Pura Skatepark",
-    "country": "Bolivia",
-    "city": "La Paz",
+    "name": "KAOS Temple Skatepark",
+    "country": "Belgium",
+    "city": "Hasselt",
+    "difficulty": "Intermediate",
+    "images": [
+      "/Skatepark-images/KAOSTemple-1.jpg",
+      "/Skatepark-images/KAOSTemple-2.JPG",
+      "/Skatepark-images/KAOSTemple-3.jpg"
+    ],
+    "description": "A unique indoor skatepark combining artistic design with flowing bowls, ramps, and technical street features in a former industrial building.",
+    "amenities": ["Indoor Park", "Lighting", "Restrooms", "Café"],
+    "rating": 4.6
+  },
+  {
+    "id": 107,
+    "name": "Peitruss Skatepark",
+    "country": "Luxembourg",
+    "city": "Luxembourg City",
+    "difficulty": "Intermediate",
+    "images": [
+      "/Skatepark-images/Peitruss-1.jpg",
+      "/Skatepark-images/Peitruss-2.jpg",
+      "/Skatepark-images/Peitruss-3.jpg"
+    ],
+    "description": "A modern concrete skatepark set in the Pétrusse Valley, featuring flowing bowls, hips, ledges, and street elements suitable for all-around skating.",
+    "amenities": ["Lighting", "Restrooms", "Seating Areas", "Public Transport"],
+    "rating": 4.6
+  },
+  {
+    "id": 108,
+    "name": "The Cradle Skatepark",
+    "country": "South Africa",
+    "city": "Johannesburg",
+    "difficulty": "Advanced",
+    "images": [
+      "/Skatepark-images/TheCradle-1.jpg",
+      "/Skatepark-images/TheCradle-2.jpg",
+      "/Skatepark-images/TheCradle-3.jpg"
+    ],
+    "description": "A world-class concrete skatepark featuring deep bowls, flowing transitions, and technical street obstacles designed for experienced riders.",
+    "amenities": ["Lighting", "Restrooms", "Parking", "Seating Areas"],
+    "rating": 4.8
+  },
+  {
+    "id": 109,
+    "name": "Galit Skatepark",
+    "country": "Israel",
+    "city": "Tel Aviv",
     "difficulty": "Intermediate",
     "images": [
       "/Skatepark-images/Galit-1.jpg",
       "/Skatepark-images/Galit-2.JPG",
       "/Skatepark-images/Galit-3.jpg"
     ],
-    "description": "A high-altitude skatepark with scenic mountain views and a mix of bowls and street features.",
-    "amenities": ["Restrooms", "Seating Areas", "Scenic Viewpoints"],
-    "rating": 4.4
+    "description": "One of Israel's most iconic skateparks, known for its smooth concrete layout, bowls, rails, and vibrant local skate scene.",
+    "amenities": ["Lighting", "Water Fountains", "Restrooms", "Seating Areas"],
+    "rating": 3.3
+  },
+  {
+    "id": 110,
+    "name": "Jiangwan Skatepark",
+    "country": "China",
+    "city": "Shanghai",
+    "difficulty": "Intermediate",
+    "images": [
+      "/Skatepark-images/Jiangwan-1.jpg",
+      "/Skatepark-images/Jiangwan-2.jpg",
+      "/Skatepark-images/Jiangwan-3.jpg"
+    ],
+    "description": "A spacious urban concrete skatepark offering a balanced mix of bowls, banks, rails, and street features for skaters of varying skill levels.",
+    "amenities": ["Lighting", "Restrooms", "Parking", "Water Fountains"],
+    "rating": 4.5
+  },
+  {
+  "id": 111,
+  "name": "Lauridsen Skatepark",
+  "country": "USA",
+  "city": "Des Moines",
+  "difficulty": "Advanced",
+  "images": [
+    "/Skatepark-images/Lauridsen-1.jpg",
+    "/Skatepark-images/Lauridsen-2.jpg",
+    "/Skatepark-images/Lauridsen-3.jpg"
+  ],
+  "description": "One of the largest skateparks in the United States, featuring Olympic-level street and park courses, snake runs, bowls, and flowing concrete lines.",
+  "amenities": ["Lighting", "Parking", "Restrooms", "Water Fountains"],
+  "rating": 4.9
+  },
+  {
+    "id": 112,
+    "name": "Fælledparken Skatepark",
+    "country": "Denmark",
+    "city": "Copenhagen",
+    "difficulty": "Intermediate",
+    "images": [
+      "/Skatepark-images/Faelledparken-1.jpg",
+      "/Skatepark-images/Faelledparken-2.jpg",
+      "/Skatepark-images/Faelledparken-3.webp"
+    ],
+    "description": "A large concrete skatepark divided into multiple zones, offering smooth flow sections and technical street obstacles for every skill level.",
+    "amenities": ["Lighting", "Seating Areas", "Public Transport", "Water Fountains"],
+    "rating": 4.7
+  },
+  {
+    "id": 113,
+    "name": "Robb Field Skatepark",
+    "country": "USA",
+    "city": "San Diego",
+    "difficulty": "Advanced",
+    "images": [
+      "/Skatepark-images/RobbField-1.jpg",
+      "/Skatepark-images/RobbField-2.jpg",
+      "/Skatepark-images/RobbField-3.jpg"
+    ],
+    "description": "A legendary Southern California skatepark featuring a large bowl, street plaza, volcano, rails, and fast flowing lines.",
+    "amenities": ["Lighting", "Parking", "Restrooms", "Seating Areas"],
+    "rating": 4.8
+  },
+  {
+    "id": 114,
+    "name": "Jake's Skate Park",
+    "country": "USA",
+    "city": "Baltimore",
+    "difficulty": "Beginner",
+    "images": [
+      "/Skatepark-images/Jakes-1.webp",
+      "/Skatepark-images/Jakes-2.jpg",
+      "/Skatepark-images/Jakes-3.jpg"
+    ],
+    "description": "A modern waterfront skatepark with rails, ledges, stairs, banks, and beginner-friendly flow sections overlooking Baltimore Harbor.",
+    "amenities": ["Lighting", "Restrooms", "Waterfront", "Parking"],
+    "rating": 4.6
+  },
+  {
+    "id": 115,
+    "name": "Örebro Skatepark",
+    "country": "Sweden",
+    "city": "Örebro",
+    "difficulty": "Intermediate",
+    "images": [
+      "/Skatepark-images/Orebro-1.jpeg",
+      "/Skatepark-images/Orebro-2.jpg",
+      "/Skatepark-images/Orebro-3.jpg"
+    ],
+    "description": "One of Sweden's premier concrete skateparks, combining expansive street sections with bowls and transition areas in a central park setting.",
+    "amenities": ["Lighting", "Restrooms", "Bike Racks", "Seating Areas"],
+    "rating": 4.8
   }
 ]
