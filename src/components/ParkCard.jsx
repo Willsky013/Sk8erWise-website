@@ -1,26 +1,39 @@
 import './components-css/ParkCard.css'
 import FavoriteButton from './FavoriteButton'
+import { FaStar } from "react-icons/fa";
+import { FaCircle } from "react-icons/fa6";
 
-export default function ParkCard( {park} ) {
+export default function ParkCard({ park }) {
 
-    //kommenterar bort hårdkodad data
-/*     park = {
-    image: "src/assets/hero.png",
-    title: "Parken",
-    country: "Landet",
-    city: "Staden",
-    level: "Nivån",
-    rating: "Betyget",
-    } */
+    const stars = Array(5).fill(0);
 
+    let levelColor = "gray";
+
+    if (park.difficulty === "Beginner") {
+        levelColor = "green";
+    } else if (park.difficulty === "Intermediate") {
+        levelColor = "yellow";
+    } else if (park.difficulty === "Advanced") {
+        levelColor = "red";
+    }
+
+    let starColoring = park.rating*20;
+
+    console.log(park);
+    
     return(
-    <div id = "parkCard">
+    <div className = "parkCard">
         <FavoriteButton parkId={park.id} />
-        <img src = {park.image} alt = "Här ska kortet sitta" id = "parkImage" />
+        <img src = {park.images[0]} alt = "Här ska kortet sitta" className = "parkImage" />
         <h2>{park.name}</h2>
         <h3>{park.city}, {park.country}</h3>
-        <span id = "levelMarking">{park.level}     </span>
-        <span id = "ratingMarking">{park.rating}</span>
+        <div className = "inforow">
+            <span className = "levelMarking" style = {{ color: levelColor }}> <FaCircle /></span>
+            <div className = "ratingMarking">
+                <span className = "emptyStars">{stars.map((_, index) => <FaStar key = {index} />)}</span>
+                <span className = "filledStars" style = {{ width: `${starColoring}%` }}>{stars.map((_, index) => <FaStar key = {index} />)}</span>
+            </div>
+        </div>
     </div>
     );
 }

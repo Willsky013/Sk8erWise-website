@@ -5,30 +5,30 @@ import ParkCard from "../ParkCard.jsx";
 const featuredParks = [
   {
     id: 1,
-    image: "/src/assets/hero.png",
-    title: "Central Skatepark",
+    name: "Central Skatepark",
     country: "Sweden",
     city: "Stockholm",
-    level: "Intermediate",
-    rating: "4.5"
+    difficulty: "Intermediate",
+    images: ["/src/assets/hero.png"],
+    rating: 4.5
   },
   {
     id: 2,
-    image: "/src/assets/hero.png",
-    title: "Street Park",
+    name: "Street Park",
     country: "Sweden",
     city: "Uppsala",
-    level: "Beginner",
-    rating: "4.0"
+    difficulty: "Beginner",
+    images: ["/src/assets/hero.png"],
+    rating: 4.0
   },
   {
     id: 3,
-    image: "/src/assets/hero.png",
-    title: "Concrete Bowl",
+    name: "Concrete Bowl",
     country: "Sweden",
     city: "Malmö",
-    level: "Advanced",
-    rating: "4.8"
+    difficulty: "Advanced",
+    images: ["/src/assets/hero.png"],
+    rating: 4.8
   }
 ];
 
