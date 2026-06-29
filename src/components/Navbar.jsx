@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ParkSearch from "./ParkSearch.jsx";
 import "./components-css/Navbar.css";
 
@@ -25,13 +25,13 @@ function Navbar() {
       {/* NAV LINKS */}
       <ul className={`navbar_links ${isOpen ? "navbar_links--open" : ""}`}>
         <li>
-          <Link to="/" onClick={() => setIsOpen(false)}>Home</Link>
+          <NavLink to="/" end onClick={() => setIsOpen(false)}>Home</NavLink>
         </li>
         <li>
-          <Link to="/favorites" onClick={() => setIsOpen(false)}>Favorites</Link>
+          <NavLink to="/favorites" onClick={() => setIsOpen(false)}>Favorites</NavLink>
         </li>
         <li>
-          <Link to="/about" onClick={() => setIsOpen(false)}>About</Link>
+          <NavLink to="/about" onClick={() => setIsOpen(false)}>About</NavLink>
         </li>
       </ul>
 
