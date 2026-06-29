@@ -1,25 +1,32 @@
-import "./pages-css/About.css";
-import AboutFeatures from "../components/AboutFeatures.jsx";
-import TeamCreators from "../components/TeamCreators.jsx";
+import team from "../../data/team.json";
+import "../components-css/TeamCreators.css";
 
-export default function About() {
+export default function TeamCreators() {
   return (
-    <div className="section about">
-      <h1>About Sk8erWise</h1>
+    <section className="team_creators">
+      <h2>Team Creators</h2>
 
-      <p>
-        Sk8terWise is your travel companion for discovering the best
-        skateparks around the world. Whether you're looking for legendary
-        street spots or hidden gems, we've got you covered.
-      </p>
+      <div className="team_grid">
+        {team.map((creator) => (
+          <a
+            key={creator.id}
+            href={creator.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="team_card"
+          >
+            <img
+              src={creator.image}
+              alt={creator.name}
+              className="team_avatar"
+            />
 
-      <AboutFeatures />
-
-      <TeamCreators />
-
-      <p className="about_note">
-        This is a student group project built with React and Vite.
-      </p>
-    </div>
+            <h3>{creator.name}</h3>
+            <p className="team_role">{creator.role}</p>
+            <p className="team_bio">{creator.bio}</p>
+          </a>
+        ))}
+      </div>
+    </section>
   );
 }

@@ -1,37 +1,42 @@
 [
   {
     "id": 1,
-    "name": "Darlynna",
+    "name": "Dar",
     "role": "Product Owner",
-    "image": "/images/team/avatar-lynna.jpg",
-    "bio": "Ensures the team delivers value and keeps the project aligned with user needs."
+    "bio": "Ensures the team delivers value and keeps the project aligned with user needs.",
+    "image": "/Sk8erWise-website/Team-images/avatar-Dar.jpg",
+    "github": "https://github.com/nidv"
   },
   {
     "id": 2,
-    "name": "Haidar",
+    "name": "Hai",
     "role": "UX/UI Lead",
-    "image": "/images/team/avatar-hai.jpg",
-    "bio": "Designs user-friendly interfaces and maintains the visual identity of Sk8erWise."
+    "bio": "Designs user-friendly interfaces and maintains the visual identity of Sk8erWise.",
+    "image": "/Sk8erWise-website/Team-images/avatar-Hai.jpg",
+    "github": "https://github.com/HaidarAlhaidari"
   },
   {
     "id": 3,
-    "name": "William",
+    "name": "Will",
     "role": "Tech Lead",
-    "image": "/images/team/avatar-wil.jpg",
-    "bio": "Oversees technical decisions, architecture, and code quality across the project."
+    "bio": "Oversees technical decisions, architecture, and code quality across the project.",
+    "image": "/Sk8erWise-website/Team-images/avatar-Will.jpg",
+    "github": "https://github.com/Willsky013"
   },
   {
     "id": 4,
-    "name": "Jöar",
+    "name": "Jo",
     "role": "QA Lead",
-    "image": "/images/team/avatar-jo.jpg",
-    "bio": "Responsible for testing, quality assurance, and ensuring a bug-free experience."
+    "bio": "Responsible for testing, quality assurance, and ensuring a bug-free experience.",
+    "image": "/Sk8erWise-website/Team-images/avatar-Jo.jpg",
+    "github": "https://github.com/joar-17"
   },
   {
     "id": 5,
     "name": "Heb",
     "role": "Delivery Lead",
-    "image": "/images/team/avatar-heb.jpg",
-    "bio": "Coordinates workflow, ensures timely delivery, and supports the team across tasks."
+    "bio": "Coordinates workflow, ensures timely delivery, and supports the team across tasks.",
+    "image": "/Sk8erWise-website/Team-images/avatar-Heb.jpg",
+    "github": "https://github.com/idesignerSe"
   }
 ]
