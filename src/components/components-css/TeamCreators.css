@@ -1,0 +1,81 @@
+/* ============================================================
+   TEAM CREATORS
+   ============================================================ */
+
+.team_creators {
+  margin: 3rem 0;
+  text-align: left;
+}
+
+.team_creators h2 {
+  font-family: var(--sans);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 1.4rem;
+}
+
+.team_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.1rem;
+}
+
+.team_card {
+  background: var(--concrete);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  transition: transform 0.22s ease, border-color 0.22s ease;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.team_card:hover {
+  transform: translateY(-4px);
+  border-color: var(--volt);
+}
+
+/* Avatar — perfect circle */
+.team_avatar {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.8rem;
+}
+
+/* Role */
+.team_role {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0.4rem 0;
+}
+
+/* Bio — remove underline completely */
+.team_bio {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.4;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+/* Remove ANY pseudo-element underline globally inside card */
+.team_card p::after,
+.team_card *::after,
+.team_bio::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: none !important;
+  height: 0 !important;
+}
+
+/* Remove any inherited underline styles */
+.team_card p,
+.team_bio {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
