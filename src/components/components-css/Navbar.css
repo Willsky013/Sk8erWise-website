@@ -13,7 +13,7 @@
   font-family: var(--heading);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--text-h);
+  color: var(--muted);
   box-sizing: border-box;
   flex-wrap: nowrap; /* Prevents layout collapse */
 }
@@ -24,13 +24,13 @@
 .navbar_logo a {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--text-h);
+  color: var(--muted);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .navbar_logo a:hover {
-  color: var(--accent);
+  color: var(--volt);
 }
 
 /* ------------------------------
@@ -38,7 +38,10 @@
    ------------------------------ */
 .navbar_links {
   display: flex;
-  align-items: center;
+  font-family: var(--mono);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.085em;
   gap: 2rem;
   list-style: none; /* Remove bullet points */
   margin: 0;
@@ -50,14 +53,35 @@
 }
 
 .navbar_links a {
-  color: var(--text);
+  position: relative;
+  display: inline-block;
+  color: var(--muted);
   text-decoration: none;
   font-size: 0.78rem;
   transition: color 0.2s ease;
 }
+.navbar_links a.active { color: var(--volt); }          
+.navbar_links a.active::after { width: 100%; }          /* the underline */
+
+.navbar_links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--volt);
+  transition: width 0.22s ease;
+}
 
 .navbar_links a:hover {
-  color: var(--accent);
+  color: var(--volt);
+}
+
+/* Active / current page */
+.navbar_links a.active {
+  color: var(--volt);
+  font-weight: 600;
 }
 
 /* ------------------------------
@@ -77,25 +101,83 @@
    SEARCH BAR IN NAV
    ------------------------------ */
 .nav-search {
-  margin-left: 2rem;
+  display: flex; gap: 0.4rem;
+}
+.nav-search button {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--line);
+  background: var(--concrete);
+  color: var(--text);
+  border-radius: var(--radius);
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+.nav-search button:hover { 
+  background: var(--volt); 
+  color: #000; 
+  border-color: var(--volt); 
+}
+
+.nav-search input {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--concrete);
+  color: var(--text);
+  transition: border-color 0.18s ease;
+}
+
+.nav-search input:focus {
+  outline: none;
+  border-color: var(--volt);
 }
 
 /* ============================================================
-   MOBILE
+   TABLET — tighten spacing before the hamburger kicks in
+   ============================================================ */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 1rem 1.25rem;
+  }
+
+  .navbar_links {
+    gap: 1.25rem;
+  }
+
+  .nav-search {
+    margin-left: 1rem;
+  }
+}
+
+/* ============================================================
+   MOBILE & SMALL TABLETS
    ============================================================ */
 @media (max-width: 768px) {
+  /* Let the open menu wrap onto its own line below the logo/toggle */
+  .navbar {
+    flex-wrap: wrap;
+  }
+
   /* Show hamburger */
   .navbar_toggle {
     display: block;
+    line-height: 1;
   }
 
   /* Hide nav links by default */
   .navbar_links {
     display: none;
     flex-direction: column;
-    gap: 1.25rem;
+    align-items: center;
+    gap: 0.25rem;
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 0.75rem;
     border-top: 2px solid var(--border);
     margin-top: 1rem;
   }
@@ -103,6 +185,24 @@
   /* Show when menu is open */
   .navbar_links--open {
     display: flex;
+  }
+
+  /* Make each link a full-width, easy-to-tap target */
+  .navbar_links li {
+    width: 100%;
+  }
+
+  .navbar_links a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.6rem 0;
+    font-size: 0.95rem;
+  }
+
+  /* Underline is desktop-only — not needed in the dropdown menu */
+  .navbar_links a::after {
+    display: none;
   }
 
   /* Hide search bar on mobile (optional) */
