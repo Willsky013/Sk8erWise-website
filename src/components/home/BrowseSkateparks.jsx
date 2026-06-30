@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import ParkGrid from '../ParkGrid';
 import '../components-css/Browseskateparks.css';
 import DropdownFilter from "../ParkFilters";
@@ -10,6 +11,13 @@ export default function BrowseSkateparks({
   setFilters,
   ParkSearch,
 }) {
+
+  const [visibleCount, setVisibleCount] = useState(9);
+
+    useEffect(() => {
+    setVisibleCount(9);
+  }, [filtered]);
+
   return (
     <section id="browse-Skateparks">
 
@@ -44,12 +52,21 @@ export default function BrowseSkateparks({
       {/* PARK GRID  */} 
       <section className="section">
         <h2>Browse Skateparks</h2>
-        <ParkGrid parks={filtered} />
-      </section>      
+        <ParkGrid parks={filtered.slice(0, visibleCount)} />
+      </section>  
 
-      <button id="more-Parks">
-        Explore more parks 🡻
-      </button>
+      {visibleCount < filtered.length ? (
+        <button
+          id="more-Parks"
+          onClick={() => setVisibleCount((prev) => prev + 9)}
+        >
+          Explore more parks 🡻
+        </button>
+      ) : (
+        <p className="no-more-parks">
+          You have reached the end of the parks list 🛹
+        </p>
+      )}
 
     </section>
   );
