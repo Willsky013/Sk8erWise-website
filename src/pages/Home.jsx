@@ -2,8 +2,7 @@ import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 import ParkSearch from "../components/ParkSearch.jsx";
-import DropdownFilter from "../components/FilterButton.jsx";
-import { useFilteredParks } from "../hooks/useParks.js";
+import { parks, useFilteredParks } from "../hooks/useParks";
 
 import HeroSection from "../components/home/HeroSection.jsx";
 import PopularSkateparks from "../components/home/PopularSkateparks.jsx";
@@ -13,15 +12,15 @@ import "./pages-css/Home.css";
 
 export default function Home() {
   const [filters, setFilters] = useState({
-    country: "",
-    city: "",
+    country: "All country",
+    city: "All city",
   });
 
   const [searchParams] = useSearchParams();
   const query = searchParams.get("q") ?? "";
 
   const [type, setType] = useState(null);
-  const filtered = useFilteredParks(query, { type });
+  const filtered = useFilteredParks(query, filters);
 
   return (
     <main className="home">
@@ -34,14 +33,11 @@ export default function Home() {
 
       {/* BROWSE SECTION */}
       <BrowseSkateparks
+        parks={parks}
+        filtered={filtered}
         filters={filters}
         setFilters={setFilters}
-        query={query}
-        type={type}
-        setType={setType}
-        filtered={filtered}
         ParkSearch={ParkSearch}
-        DropdownFilter={DropdownFilter}
       />
 
     </main>
