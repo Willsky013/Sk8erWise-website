@@ -17,9 +17,6 @@ export default function Home() {
     city: "",
   }); 
   const [selectedPark, setSelectedPark] = useState(null); 
-    country: "All country",
-    city: "All city",
-  });
 
   const [searchParams] = useSearchParams();
   const query = searchParams.get("q") ?? "";
@@ -43,15 +40,14 @@ export default function Home() {
         filters={filters}
         setFilters={setFilters}
         ParkSearch={ParkSearch}
-        DropdownFilter={DropdownFilter}
         onParkClick={setSelectedPark}
       />
-      
 
-<ParkDetailModal
-  park={selectedPark}
-  onClose={() => setSelectedPark(null)}
-/>
+      <ParkDetailModal
+        park={selectedPark}
+        onClose={() => setSelectedPark(null)}
+      />
+      
     </main>
   );
 }
