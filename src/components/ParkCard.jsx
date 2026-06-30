@@ -1,51 +1,59 @@
-import './components-css/ParkCard.css'
-import FavoriteButton from './FavoriteButton'
+import "./components-css/ParkCard.css";
+import FavoriteButton from "./FavoriteButton";
 import { FaStar } from "react-icons/fa";
 import { FaCircle } from "react-icons/fa6";
 
 export default function ParkCard({ park, onClick }) {
+  const stars = Array(5).fill(0);
 
-    const stars = Array(5).fill(0);
+  let levelColor = "gray";
 
-    let levelColor = "gray";
+  if (park.difficulty === "Beginner") {
+    levelColor = "green";
+  } else if (park.difficulty === "Intermediate") {
+    levelColor = "yellow";
+  } else if (park.difficulty === "Advanced") {
+    levelColor = "red";
+  }
 
-    if (park.difficulty === "Beginner") {
-        levelColor = "green";
-    } else if (park.difficulty === "Intermediate") {
-        levelColor = "yellow";
-    } else if (park.difficulty === "Advanced") {
-        levelColor = "red";
-    }
+  const starColoring = park.rating * 20;
 
-    let starColoring = park.rating*20;
-
-    console.log(park);
-    
-    return(
+  return (
     <div className="parkCard" onClick={onClick}>
-       <div onClick={(e) => e.stopPropagation()}>
-  <FavoriteButton parkId={park.id} />
-</div>
-<div
-  className="parkCard"
-  onClick={() => {
-    console.log("Clicked park:", park);
-    onClick?.();
-  }}
-></div>
-        <img 
-        src={`${import.meta.env.BASE_URL}${park.images[0].replace(/^\//, "")}`} 
-        alt = "Här ska kortet sitta" className = "parkImage" />
-        <h2>{park.name}</h2>
-        <h3>{park.city}, {park.country}</h3>
-        <div className = "inforow">
-            <span className = "levelMarking" style = {{ color: levelColor }}> <FaCircle /></span>
-            <div className = "ratingMarking">
-                <span className = "emptyStars">{stars.map((_, index) => <FaStar key = {index} />)}</span>
-                <span className = "filledStars" style = {{ width: `${starColoring}%` }}>{stars.map((_, index) => <FaStar key = {index} />)}</span>
-            </div>
+      <div onClick={(e) => e.stopPropagation()}>
+        <FavoriteButton parkId={park.id} />
+      </div>
+
+      <img
+        src={`${import.meta.env.BASE_URL}${park.images[0].replace(/^\//, "")}`}
+        alt={park.name}
+        className="parkImage"
+      />
+
+      <h2>{park.name}</h2>
+      <h3>
+        {park.city}, {park.country}
+      </h3>
+
+      <div className="inforow">
+        <span className="levelMarking" style={{ color: levelColor }}>
+          <FaCircle />
+        </span>
+
+        <div className="ratingMarking">
+          <span className="emptyStars">
+            {stars.map((_, index) => (
+              <FaStar key={index} />
+            ))}
+          </span>
+
+          <span className="filledStars" style={{ width: `${starColoring}%` }}>
+            {stars.map((_, index) => (
+              <FaStar key={index} />
+            ))}
+          </span>
         </div>
+      </div>
     </div>
-    
-    );
+  );
 }
