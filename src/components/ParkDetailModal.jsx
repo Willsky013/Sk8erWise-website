@@ -1,3 +1,4 @@
+import "./components-css/ParkDetailModal.css";
 function ParkDetailModal({ park, onClose }) {
   if (!park) return null;
 
