@@ -105,3 +105,15 @@
     border-color: var(--volt);
     box-shadow: 0 0 0 4px rgba(204, 255, 0, 0.12);
 }
+
+
+/* Tablet: narrow the search bar so it doesn't reach under the
+   Popular Skateparks card, which sits to the right on this layout. */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-search input {
+        max-width: 21rem;
+        font-size: 0.9rem;
+        padding: 0.7rem 0.9rem;        
+    }
+}
+
