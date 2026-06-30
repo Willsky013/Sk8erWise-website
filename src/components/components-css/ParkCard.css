@@ -4,6 +4,7 @@
     height: 400px;
     width: 300px;
     border: 5px solid black;
+    text-align: center;
 }
 .inforow {
     display: flex;
