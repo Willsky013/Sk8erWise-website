@@ -17,13 +17,63 @@
     display: flex;
     gap: 1rem;
 }
+.dropdownFilter {
+    width: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    background-color: rgb(76, 76, 77);
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.dropdownFilter:hover {
+    border-color: #555;
+}
+.dropdownFilter:focus {
+    outline: none;
+    border-color: black;
+}
 
+
+/*More parks button*/
 #more-Parks {
-    height: 2.2rem;
-    width: 9rem;
+    display: block;
+    margin: 0.2rem auto 0;
+
+    height: 2.5rem;
+    width: 10rem;
+
+    background-color: black;
+    color: white;
+
+    border: 2px solid #ffd900;
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: 
+        box-shadow 0.3s ease,
+        transform 0.2s ease,
+        background-color 0.3s ease;
+}
+#more-Parks:hover {
+    background-color: #111;
+
+    box-shadow:
+        0 0 8px #ffd900,
+        0 0 16px #ffd900,
+        0 0 24px rgba(255, 217, 0, 0.7);
+
+    transform: translateY(-2px);
+}
+.no-more-parks {
+    text-align: center;
     margin-top: 1.5rem;
-    background-color: rgba(192, 192, 192, 0.2);
-    color: rgb(255, 255, 255);
+    color: white;
+    font-size: 1rem;
+    opacity: 0.8;
 }
 
 /* Search bar stays here for now */
@@ -55,3 +105,15 @@
     border-color: var(--volt);
     box-shadow: 0 0 0 4px rgba(204, 255, 0, 0.12);
 }
+
+
+/* Tablet: narrow the search bar so it doesn't reach under the
+   Popular Skateparks card, which sits to the right on this layout. */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-search input {
+        max-width: 21rem;
+        font-size: 0.9rem;
+        padding: 0.7rem 0.9rem;        
+    }
+}
+

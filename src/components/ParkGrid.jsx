@@ -1,7 +1,7 @@
 import ParkCard from "./ParkCard";
 import "./components-css/ParkGrid.css";
 
-function ParkGrid({ parks, emptyMessage = 'No parks match your search.', loading = false }) {
+function ParkGrid({ parks, emptyMessage = 'No parks match your search.', loading = false, onParkClick }) {
   if (loading) {
     return (
       <section className="park-grid">
@@ -20,6 +20,7 @@ function ParkGrid({ parks, emptyMessage = 'No parks match your search.', loading
         <ParkCard
           key={park.id}
           park={park}
+          onClick={() => onParkClick(park)}
         />
       ))}
     </section>
