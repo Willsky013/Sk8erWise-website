@@ -3,7 +3,7 @@ import FavoriteButton from './FavoriteButton'
 import { FaStar } from "react-icons/fa";
 import { FaCircle } from "react-icons/fa6";
 
-export default function ParkCard({ park }) {
+export default function ParkCard({ park, onClick }) {
 
     const stars = Array(5).fill(0);
 
@@ -22,7 +22,7 @@ export default function ParkCard({ park }) {
     console.log(park);
     
     return(
-    <div className = "parkCard">
+    <div className="parkCard" onClick={onClick}>
         <FavoriteButton parkId={park.id} />
         <img 
         src={`${import.meta.env.BASE_URL}${park.images[0].replace(/^\//, "")}`} 

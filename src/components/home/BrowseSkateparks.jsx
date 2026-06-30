@@ -10,7 +10,8 @@ export default function BrowseSkateparks({
   setType,
   filtered,
   ParkSearch,
-  DropdownFilter
+  DropdownFilter,
+  onParkClick
 }) {
   return (
     <section id="browse-Skateparks">
@@ -31,7 +32,9 @@ export default function BrowseSkateparks({
       {/* PARK GRID  */} 
       <section className="section">
         <h2>Browse Skateparks</h2>
-        <ParkGrid parks={filtered} />
+        <ParkGrid parks={filtered}
+         onParkClick={onParkClick}
+         />
       </section>      
 
       <button id="more-Parks">
