@@ -70,7 +70,7 @@ Board includes:
 ---
 
 ## 🧑‍🤝‍🧑 Team Roles
-- **Product Owner** – vision, priorities, acceptance criteria  / Darlynna
+- **Product Owner** – vision, priorities, acceptance criteria  / Dar
 - **UX/UI Lead** – wireframes, layout, responsive design  / Haidar
 - **Frontend/Backend Developers** – pages, components, filters, modal  / All of us! 
 - **Teach Lead** – API, database, reviews, search logic  / William
