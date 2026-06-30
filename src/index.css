@@ -14,7 +14,7 @@
   --accent-border: rgba(170, 59, 255, 0.5);
   --muted: #8c8c9a;
 
-      /* surfaces */
+  /* surfaces */
   --asphalt: #0b0b0c;
   --concrete: #15151a;
   --concrete-2: #1c1c23;
@@ -23,7 +23,8 @@
 
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -58,7 +59,8 @@
     --accent-border: rgba(192, 132, 252, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px,
+      rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
 
   #social .button-icon {
@@ -98,6 +100,7 @@ h1 {
     margin: 20px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
@@ -107,6 +110,7 @@ h2 {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }
@@ -138,4 +142,37 @@ code {
 
 .navbar a {
   text-decoration: none;
+}
+
+/* -------------------------------------------------- */
+/* VOLT ACCENT LAYER — SAFE ADDITIONS */
+/* -------------------------------------------------- */
+
+/* Volt hover for links */
+a:hover,
+.navbar a:hover {
+  color: var(--volt);
+}
+
+/* Volt hover for buttons */
+button:hover {
+  border-color: var(--volt);
+  color: var(--volt);
+}
+
+/* Volt glow utility */
+.hover-volt:hover {
+  box-shadow: 0 0 12px var(--volt);
+}
+
+/* Volt header accent */
+header {
+  border-bottom: 2px solid var(--volt);
+}
+
+/* Volt card hover */
+.card:hover,
+.parkCard:hover {
+  border-color: var(--volt);
+  box-shadow: 0 0 10px var(--volt);
 }
