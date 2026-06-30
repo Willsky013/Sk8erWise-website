@@ -3,6 +3,20 @@
     height: 20rem;
 }
 
+#popular-Skateparks h2 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Mobile: go full width and let the height grow to the card's
+   natural size, so the card matches the Browse Skateparks grid */
+@media (max-width: 768px) {
+    #popular-Skateparks {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .carousel {
   position: relative;
   display: flex;
