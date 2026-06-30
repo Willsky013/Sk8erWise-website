@@ -5,7 +5,7 @@ import Parks from "../../data/parks.json";
 
 
 
-export default function PopularSkateparks() {
+export default function PopularSkateparks({onParkClick}) {
 
   const featuredParks = Parks.filter(
   (park) => [115, 107, 106].includes(Number(park.id))
@@ -33,6 +33,7 @@ export default function PopularSkateparks() {
         <div className="cards">
           {featuredParks[start] && (
             <ParkGrid 
+              onParkClick={onParkClick}
               key={featuredParks[start].id}
               parks={[featuredParks[start]]}
             />

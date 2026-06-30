@@ -30,7 +30,7 @@ export default function Home() {
       {/* DESKTOP LAYOUT FIX — both components inside #hero */}
       <div id="hero">
         <HeroSection />
-        <PopularSkateparks />
+        <PopularSkateparks onParkClick={setSelectedPark}/>
       </div>
 
       {/* BROWSE SECTION */}
@@ -47,7 +47,7 @@ export default function Home() {
         park={selectedPark}
         onClose={() => setSelectedPark(null)}
       />
-      
+
     </main>
   );
 }
