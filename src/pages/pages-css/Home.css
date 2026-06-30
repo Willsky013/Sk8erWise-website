@@ -1,22 +1,4 @@
 /* ===========================
-   HERO SECTION
-   =========================== */
-#hero {
-    display: flex;
-    text-align: left;
-}
-
-#hero-Text {
-  width: 50%;
-  margin:  0;
-}
-
-#welcome-Text {
-    font-size: 2.3rem;
-    line-height: 1;
-}
-
-/* ===========================
    BROWSE SKATEPARKS SECTION
    =========================== */
 #browse-Skateparks {
