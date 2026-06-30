@@ -54,12 +54,10 @@ export default function BrowseSkateparks({
       {/* PARK GRID  */} 
       <section className="section">
         <h2>Browse Skateparks</h2>
-        <ParkGrid parks={filtered}
+         <ParkGrid parks={filtered.slice(0, visibleCount)} />
          onParkClick={onParkClick}
          />
       </section>      
-        <ParkGrid parks={filtered.slice(0, visibleCount)} />
-      </section>  
 
       {visibleCount < filtered.length ? (
         <button
