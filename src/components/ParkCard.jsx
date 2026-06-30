@@ -26,6 +26,13 @@ export default function ParkCard({ park, onClick }) {
        <div onClick={(e) => e.stopPropagation()}>
   <FavoriteButton parkId={park.id} />
 </div>
+<div
+  className="parkCard"
+  onClick={() => {
+    console.log("Clicked park:", park);
+    onClick?.();
+  }}
+></div>
         <img 
         src={`${import.meta.env.BASE_URL}${park.images[0].replace(/^\//, "")}`} 
         alt = "Här ska kortet sitta" className = "parkImage" />
@@ -39,5 +46,6 @@ export default function ParkCard({ park, onClick }) {
             </div>
         </div>
     </div>
+    
     );
 }
