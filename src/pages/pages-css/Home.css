@@ -30,32 +30,6 @@
     text-align: left;
 }
 
-.filters {
-    display: flex;
-    gap: 1rem;
-}
-
-.dropdownFilter {
-    width: auto;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    background-color: rgb(76, 76, 77);
-    color: white;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.dropdownFilter:hover {
-    border-color: #555;
-}
-
-.dropdownFilter:focus {
-    outline: none;
-    border-color: black;
-}
-
 #more-Parks {
     height: 2.2rem;
     width: 9rem;

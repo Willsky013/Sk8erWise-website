@@ -1,23 +1,19 @@
-function ParkFilters({
+export default function ParkFilters({
   parks = [],
   selectedCountry,
   setSelectedCountry,
   selectedCity,
   setSelectedCity,
 }) {
-  const countries = [...new Set(parks.map((park) => park.country))];
+  const countries = [...new Set(parks.map((park) => park.country))].sort();
 
   const cities = [
-    ...new Set(
-      parks
-        .filter(
-          (park) =>
-            selectedCountry === "All country" ||
-            park.country === selectedCountry
-        )
+    ...new Set(parks.filter(
+        (park) =>
+          selectedCountry === "All country" ||
+          park.country === selectedCountry)
         .map((park) => park.city)
-    ),
-  ];
+  ),];
 
   function handleCountryChange(e) {
     setSelectedCountry(e.target.value);
@@ -26,8 +22,7 @@ function ParkFilters({
 
   return (
     <div className="filters">
-      <select
-        className="dropdownFilter"
+      <select className="dropdownFilter"
         value={selectedCountry}
         onChange={handleCountryChange}
       >
@@ -40,8 +35,7 @@ function ParkFilters({
         ))}
       </select>
 
-      <select
-        className="dropdownFilter"
+      <select className="dropdownFilter"
         value={selectedCity}
         onChange={(e) => setSelectedCity(e.target.value)}
       >
@@ -56,5 +50,3 @@ function ParkFilters({
     </div>
   );
 }
-
-export default ParkFilters;
