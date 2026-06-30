@@ -25,13 +25,17 @@ export default function ParkCard({ park }) {
 
     const [modal, setModal] = useState(false);
 
-    function toggle() {
-        setModal(!modal)
+    function openModal() {
+        setModal(true);
+    }
+
+    function closeModal() {
+        setModal(false);
     }
     
     return(
     <>
-        <div className = "parkCard" onClick = {toggle}>
+        <div className = "parkCard" onClick = {openModal}>
             <div onClick={(e) => e.stopPropagation()}>
                 <FavoriteButton parkId={park.id} />
             </div>
@@ -50,7 +54,7 @@ export default function ParkCard({ park }) {
         </div>
 
         {modal && (
-            <ParkDetailModal key = {park.id} park = {park}/>
+            <ParkDetailModal key = {park.id} park = {park} onClose = {closeModal}/>
         )}
     </>
     );
