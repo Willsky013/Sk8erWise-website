@@ -7,11 +7,16 @@ import { parks, useFilteredParks } from "../hooks/useParks";
 import HeroSection from "../components/home/HeroSection.jsx";
 import PopularSkateparks from "../components/home/PopularSkateparks.jsx";
 import BrowseSkateparks from "../components/home/BrowseSkateparks.jsx";
+import ParkDetailModal from "../components/ParkDetailModal.jsx";
 
 import "./pages-css/Home.css";
 
 export default function Home() {
   const [filters, setFilters] = useState({
+    country: "",
+    city: "",
+  }); 
+  const [selectedPark, setSelectedPark] = useState(null); 
     country: "All country",
     city: "All city",
   });
@@ -38,8 +43,15 @@ export default function Home() {
         filters={filters}
         setFilters={setFilters}
         ParkSearch={ParkSearch}
+        DropdownFilter={DropdownFilter}
+        onParkClick={setSelectedPark}
       />
+      
 
+<ParkDetailModal
+  park={selectedPark}
+  onClose={() => setSelectedPark(null)}
+/>
     </main>
   );
 }

@@ -10,6 +10,8 @@ export default function BrowseSkateparks({
   filters,
   setFilters,
   ParkSearch,
+  DropdownFilter,
+  onParkClick
 }) {
 
   const [visibleCount, setVisibleCount] = useState(9);
@@ -52,8 +54,10 @@ export default function BrowseSkateparks({
       {/* PARK GRID  */} 
       <section className="section">
         <h2>Browse Skateparks</h2>
-        <ParkGrid parks={filtered.slice(0, visibleCount)} />
-      </section>  
+         <ParkGrid parks={filtered.slice(0, visibleCount)} />
+         onParkClick={onParkClick}
+         />
+      </section>      
 
       {visibleCount < filtered.length ? (
         <button
