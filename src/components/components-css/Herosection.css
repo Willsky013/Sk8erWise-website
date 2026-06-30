@@ -9,10 +9,23 @@
 
 #hero-Text {
     width: 50%;
-    margin: 0 2%;
+    margin: 0;
 }
 
 #welcome-Text {
     font-size: 2.3rem;
     line-height: 1;
+}
+
+/* Mobile: stack the hero so Popular Skateparks drops down, landing
+   right above the Browse Skateparks section, and let the hero text
+   span the full screen width */
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+    }
+
+    #hero-Text {
+        width: 100%;
+    }
 }

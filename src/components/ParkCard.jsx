@@ -2,6 +2,8 @@ import "./components-css/ParkCard.css";
 import FavoriteButton from "./FavoriteButton";
 import { FaStar } from "react-icons/fa";
 import { FaCircle } from "react-icons/fa6";
+import ParkDetailModal from './ParkDetailModal';
+import { useState } from "react";
 
 export default function ParkCard({ park, onClick }) {
   const stars = Array(5).fill(0);
