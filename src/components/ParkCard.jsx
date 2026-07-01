@@ -8,54 +8,62 @@ import { useState } from "react";
 export default function ParkCard({ park, onClick }) {
   const stars = Array(5).fill(0);
 
-  let levelColor = "gray";
+  let levelColor = "var(--muted)";
 
   if (park.difficulty === "Beginner") {
-    levelColor = "green";
+    levelColor = "#3ddc84";
   } else if (park.difficulty === "Intermediate") {
-    levelColor = "yellow";
+    levelColor = "#ffd23f";
   } else if (park.difficulty === "Advanced") {
-    levelColor = "red";
+    levelColor = "#ff3b1f";
   }
 
   const starColoring = park.rating * 20;
 
   return (
-    <div className="parkCard" onClick={onClick}>
-      <div onClick={(e) => e.stopPropagation()}>
-        <FavoriteButton parkId={park.id} />
+    <article className="parkCard" onClick={onClick}>
+      <div className="card-media">
+        <img
+          src={`${import.meta.env.BASE_URL}${park.images[0].replace(/^\//, "")}`}
+          alt={park.name}
+          className="parkImage"
+          loading="lazy"
+        />
       </div>
 
-      <img
-        src={`${import.meta.env.BASE_URL}${park.images[0].replace(/^\//, "")}`}
-        alt={park.name}
-        className="parkImage"
-      />
+      <div className="card-body">
+        <div className="card-header">
+          <h2 className="card-title">{park.name}</h2>
+          <div onClick={(e) => e.stopPropagation()}>
+            <FavoriteButton parkId={park.id} />
+          </div>
+        </div>
 
-      <h2>{park.name}</h2>
-      <h3>
-        {park.city}, {park.country}
-      </h3>
+        <p className="card-location">
+          {park.city}, {park.country}
+        </p>
 
-      <div className="inforow">
-        <span className="levelMarking" style={{ color: levelColor }}>
-          <FaCircle />
-        </span>
-
-        <div className="ratingMarking">
-          <span className="emptyStars">
-            {stars.map((_, index) => (
-              <FaStar key={index} />
-            ))}
+        <div className="inforow">
+          <span className="levelMarking">
+            <FaCircle className="levelDot" style={{ color: levelColor }} />
+            {park.difficulty}
           </span>
 
-          <span className="filledStars" style={{ width: `${starColoring}%` }}>
-            {stars.map((_, index) => (
-              <FaStar key={index} />
-            ))}
-          </span>
+          <div className="ratingMarking" title={`${park.rating} / 5`}>
+            <span className="emptyStars">
+              {stars.map((_, index) => (
+                <FaStar key={index} />
+              ))}
+            </span>
+
+            <span className="filledStars" style={{ width: `${starColoring}%` }}>
+              {stars.map((_, index) => (
+                <FaStar key={index} />
+              ))}
+            </span>
+          </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
