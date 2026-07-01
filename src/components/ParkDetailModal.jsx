@@ -20,7 +20,9 @@ function ParkDetailModal({ park, onClose }) {
           ×
         </button>
 
-        <ImageSlider images={images} />
+        <div className="image-slider-container">
+          <ImageSlider images={images} />
+        </div>
 
         <h2>{park.name}</h2>
         <p>{park.description}</p>
