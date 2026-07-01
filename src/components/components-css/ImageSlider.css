@@ -1,34 +1,36 @@
+/* MAIN SLIDER */
 .image-slider {
   position: relative;
   width: 100%;
   border-radius: 12px;
   overflow: hidden;
 
-  /* FIX: kompakt och stabil yta */
+  /* Compact & stable image area */
   max-height: 240px;
 
-  /* FIX: centrerar bilden visuellt */
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background: #f7f7f7; /* mjuk bakgrund runt bilden */
+  background: #f7f7f7; /* soft background around image */
 }
 
-/* Image */
+/* REMOVE BACKGROUND WHEN FULLSCREEN VIEWER IS OPEN */
+.image-slider.no-bg {
+  background: transparent !important;
+}
+
+/* Slider Image */
 .slider-image {
   width: 100%;
   height: 100%;
-
-  /* FIX: visar hela bilden utan beskärning */
-  object-fit: contain;
-
-  /* FIX: centrerar bilden */
+  object-fit: contain;   /* show full image */
   display: block;
   border-radius: 12px;
+  cursor: pointer;       /* clickable for full-screen viewer */
 }
 
-/* Buttons */
+/* Navigation Buttons */
 .slider-button {
   position: absolute;
   top: 50%;
@@ -80,18 +82,48 @@
 }
 
 /* --------------------------------------------- */
+/* FULL-SCREEN IMAGE VIEWER */
+/* --------------------------------------------- */
+
+.image-viewer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95); /* DARKER so nothing white shows */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  cursor: zoom-out;
+}
+
+.image-viewer-box {
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-viewer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* show full image */
+  border-radius: 12px;
+}
+
+/* --------------------------------------------- */
 /* RESPONSIVE DESIGN */
 /* --------------------------------------------- */
 
 @media (max-width: 768px) {
   .image-slider {
-    max-height: 200px; /* mindre på tablet */
+    max-height: 200px;
   }
 }
 
 @media (max-width: 480px) {
   .image-slider {
-    max-height: 160px; /* perfekt mobilstorlek */
+    max-height: 160px;
   }
 
   .slider-button {

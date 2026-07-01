@@ -12,10 +12,10 @@
 
 /* Modal Card */
 .park-detail-modal {
-  background: #ffffff;
+  background: #f7f7f7;
   width: 650px;
   max-width: 92%;
-  max-height: 88vh;          /* begränsar höjd */
+  max-height: 88vh;
   overflow-y: auto;
   padding: 24px;
   border-radius: 16px;
@@ -45,7 +45,7 @@
 
 /* Image Section */
 .modal-image-section {
-  margin-bottom: 16px;       /* mindre spacing */
+  margin-bottom: 16px;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -55,7 +55,7 @@
   color: #222;
   font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 16px;       /* mindre spacing */
+  margin-bottom: 16px;
   line-height: 1.25;
   letter-spacing: 0.3px;
 }
@@ -63,7 +63,7 @@
 /* Description */
 .modal-description {
   font-size: 1rem;
-  line-height: 1.5;          /* kompaktare */
+  line-height: 1.5;
   margin-bottom: 18px;
   color: #444;
 }
@@ -79,15 +79,15 @@
 .amenities-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;                  /* mindre gap */
+  gap: 8px;
   margin-bottom: 18px;
 }
 
 .amenity-chip {
   background: #f3f3f3;
-  padding: 6px 12px;         /* mindre padding */
+  padding: 6px 12px;
   border-radius: 18px;
-  font-size: 0.85rem;        /* mindre text */
+  font-size: 0.85rem;
   color: #333;
   border: 1px solid #e0e0e0;
 }
@@ -97,69 +97,28 @@
   font-size: 1.1rem;
   font-weight: 600;
   background: #fafafa;
-  padding: 8px 12px;         /* mindre padding */
+  padding: 8px 12px;
   border-radius: 10px;
   width: fit-content;
   border: 1px solid #e5e5e5;
 }
 
-/* --------------------------------------------- */
-/* RESPONSIVE DESIGN */
-/* --------------------------------------------- */
-
-/* Tablets (max-width: 768px) */
+/* Responsive */
 @media (max-width: 768px) {
   .park-detail-modal {
     width: 95%;
     padding: 18px;
-    max-height: 85vh;        /* mindre höjd → mindre scroll */
-  }
-
-  .modal-title {
-    font-size: 1.6rem;
-    margin-bottom: 14px;
-  }
-
-  .modal-description {
-    font-size: 0.95rem;
-    margin-bottom: 16px;
-  }
-
-  .amenity-chip {
-    font-size: 0.8rem;
-    padding: 6px 10px;
+    max-height: 85vh;
   }
 }
 
-/* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
   .park-detail-modal {
     width: 100%;
     height: auto;
-    max-height: 80vh;        /* viktig fix: mindre höjd */
-    border-radius: 12px;     /* square‑känsla */
-    padding: 14px;           /* kompakt padding */
-  }
-
-  .modal-title {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-  }
-
-  .modal-description {
-    font-size: 0.9rem;
-    margin-bottom: 14px;
-    line-height: 1.45;
-  }
-
-  .modal-subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-  }
-
-  .amenity-chip {
-    font-size: 0.75rem;
-    padding: 5px 10px;
+    max-height: 80vh;
+    border-radius: 12px;
+    padding: 14px;
   }
 
   .modal-close-btn {
