@@ -1,40 +1,127 @@
+/* ============================================================
+   PARK CARD — Concrete & Volt
+   ============================================================ */
 .parkCard {
-    display: flex;
-    flex-direction: column;
-    height: 400px;
-    width: 300px;
-    border: 5px solid black;
-    text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background: var(--concrete);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.22s cubic-bezier(0.2, 0.7, 0.3, 1),
+    border-color 0.22s ease, box-shadow 0.22s ease;
 }
-.inforow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: auto;
-    margin-bottom: 10px;
+.parkCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--volt);
+  box-shadow: 0 18px 0 -10px rgba(204, 255, 0, 0.35),
+    0 22px 50px -24px rgba(0, 0, 0, 0.9);
+}
+
+/* ---------- media ---------- */
+.card-media {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 11, 12, 0.55), transparent 55%);
 }
 .parkImage {
-    display: block;
-    margin: 0 auto;
-    height: 200px;
-    width: 80%;
-
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.3, 1), filter 0.4s ease;
+  filter: saturate(0.9) contrast(1.05);
 }
+.parkCard:hover .parkImage {
+  transform: scale(1.07);
+  filter: saturate(1.1) contrast(1.08);
+}
+
+/* ---------- body ---------- */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem 1.05rem 1.1rem;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 0.5rem;
+}
+.card-title {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: var(--text);
+}
+.parkCard:hover .card-title {
+  color: var(--volt);
+}
+.card-location {
+  font-family: var(--mono);
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0.4rem 0 0.85rem;
+}
+
+/* ---------- difficulty + rating markings ---------- */
+.inforow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+.levelMarking {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  padding: 0.28rem 0.6rem;
+  border-radius: 2px;
+  background: var(--concrete-2);
+  border: 1px solid var(--line);
+}
+.levelDot {
+  font-size: 0.55rem;
+}
+
 .ratingMarking {
-    position: relative;
-    line-height: 1;
-    display: inline-block;
+  position: relative;
+  line-height: 1;
+  display: inline-block;
+  font-size: 0.95rem;
 }
 .emptyStars {
-    color: gray;
+  color: var(--line);
 }
 .filledStars {
-    color: gold;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    white-space: nowrap;
+  color: var(--volt);
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }

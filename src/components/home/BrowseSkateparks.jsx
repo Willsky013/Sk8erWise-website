@@ -1,17 +1,24 @@
+import { useEffect, useState } from "react";
 import ParkGrid from '../ParkGrid';
 import '../components-css/Browseskateparks.css';
+import DropdownFilter from "../ParkFilters";
 
 
 export default function BrowseSkateparks({
+  parks,
+  filtered,
   filters,
   setFilters,
-  query,
-  type,
-  setType,
-  filtered,
   ParkSearch,
-  DropdownFilter
+  onParkClick
 }) {
+
+  const [visibleCount, setVisibleCount] = useState(9);
+
+    useEffect(() => {
+    setVisibleCount(9);
+  }, [filtered]);
+
   return (
     <section id="browse-Skateparks">
 
@@ -24,19 +31,45 @@ export default function BrowseSkateparks({
       />
 
       <div className="filters">
-        <DropdownFilter type="country" setFilters={setFilters} />
-        <DropdownFilter type="city" setFilters={setFilters} />
+        <DropdownFilter 
+          parks={parks}
+          selectedCountry={filters.country}
+          setSelectedCountry={(country) =>
+            setFilters((prev) => ({
+              ...prev,
+              country,
+            }))
+          }
+          selectedCity={filters.city}
+          setSelectedCity={(city) =>
+            setFilters((prev) => ({
+              ...prev,
+              city,
+            }))
+          }
+        />
       </div>
 
       {/* PARK GRID  */} 
       <section className="section">
         <h2>Browse Skateparks</h2>
-        <ParkGrid parks={filtered} />
+         <ParkGrid parks={filtered.slice(0, visibleCount)}
+         onParkClick={onParkClick}
+         />
       </section>      
 
-      <button id="more-Parks">
-        Explore more parks 🡻
-      </button>
+      {visibleCount < filtered.length ? (
+        <button
+          id="more-Parks"
+          onClick={() => setVisibleCount((prev) => prev + 9)}
+        >
+          Explore more parks 🡻
+        </button>
+      ) : (
+        <p className="no-more-parks">
+          You have reached the end of the parks list 🛹
+        </p>
+      )}
 
     </section>
   );
