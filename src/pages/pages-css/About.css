@@ -10,8 +10,9 @@
 
 .about_cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.1rem;
+  grid-template-columns: repeat(3, 220px);
+  justify-content: center;
+  gap: 1.5rem;
   margin: 2rem 0;
 }
 .about_card {
