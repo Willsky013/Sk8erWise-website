@@ -1,38 +1,48 @@
 import "./components-css/ParkDetailModal.css";
 import ImageSlider from "./ImageSlider";
+import { X } from "lucide-react";
 
 function ParkDetailModal({ park, onClose }) {
   if (!park) return null;
 
-  // const image =
-  //   park.images?.[0]
-  //     ? `${import.meta.env.BASE_URL}${park.images[0].replace(/^\//, "")}`
-  //     : park.image;
-
-  const images = park.images?.map((img) => `${import.meta.env.BASE_URL}${img.replace(/^\//, "")}`) || [park.image];
-
-  console.log(images);
+  const images =
+    park.images?.map((img) => `${import.meta.env.BASE_URL}${img.replace(/^\//, "")}`) ||
+    [park.image];
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="park-detail-modal" onClick={(e) => e.stopPropagation()}>
+        
+        {/* Close Button */}
         <button className="modal-close-btn" onClick={onClose}>
-          ×
+          <X size={26} />
         </button>
 
-        <ImageSlider images={images} />
+        {/* Image Carousel */}
+        <div className="modal-image-section">
+          <ImageSlider images={images} />
+        </div>
 
-        <h2>{park.name}</h2>
-        <p>{park.description}</p>
+        {/* Title */}
+        <h2 className="modal-title">{park.name}</h2>
 
-        <h3>Amenities</h3>
-        <ul>
+        {/* Description */}
+        <p className="modal-description">{park.description}</p>
+
+        {/* Amenities */}
+        <h3 className="modal-subtitle">Amenities</h3>
+        <div className="amenities-container">
           {(park.amenities || []).map((item) => (
-            <li key={item}>{item}</li>
+            <span key={item} className="amenity-chip">
+              {item}
+            </span>
           ))}
-        </ul>
+        </div>
 
-        <p>Rating: ⭐ {park.rating}</p>
+        {/* Rating */}
+        <div className="rating-box">
+          ⭐ <span>{park.rating}</span>
+        </div>
       </div>
     </div>
   );
