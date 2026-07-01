@@ -28,8 +28,7 @@
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  /* --mono: 'Space Mono', ui-monospace, Consolas, monospace; */
-  --mono: ui-monospace, Consolas, monospace;  
+  --mono: ui-monospace, Consolas, monospace;
   --display: 'Anton', 'Arial Narrow', sans-serif;
   --body: 'DM Sans', system-ui, sans-serif;
 
@@ -39,7 +38,7 @@
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
-  background: var(--bg);  
+  background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -73,7 +72,7 @@
 
 body {
   margin: 0;
-  cursor: url('/cursor/skateboard-cursor.svg') 16 16, auto;
+  cursor: auto;
 }
 
 #root {
@@ -166,11 +165,11 @@ button:hover {
   color: var(--volt);
 }
 
-/* Volt skateboard hover cursor */
+/* Volt hover cursor (reset to default pointer) */
 a:hover,
 button:hover,
 .navbar a:hover {
-  cursor: url('/cursor/skateboard-cursor-volt.svg') 16 16, pointer;
+  cursor: pointer;
 }
 
 /* Volt glow utility */
@@ -189,32 +188,3 @@ header {
   border-color: var(--volt);
   box-shadow: 0 0 10px var(--volt);
 }
-
-/* -------------------------------------------------- */
-/* VOLT SPARK TRAIL — ANIMATED CURSOR EFFECT */
-/* -------------------------------------------------- */
-
-.spark {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  background: var(--volt);
-  border-radius: 50%;
-  pointer-events: none;
-  opacity: 0.9;
-  transform: translate(-50%, -50%);
-  animation: spark-fade 0.2s linear forwards;
-  z-index: 9999;
-}
-
-@keyframes spark-fade {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(2);
-  }
-}
-
