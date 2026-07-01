@@ -1,9 +1,13 @@
 import './components-css/Footer.css'
+import team from "../data/team.json";
 
 export default function Footer() {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <footer className="footer">
       <p>Guide for Skaters - group project · {new Date().getFullYear()}</p>
+
       <a
         className="footer_github"
         href="https://github.com/Willsky013/Sk8erWise-website"
@@ -19,6 +23,24 @@ export default function Footer() {
         </svg>
         <span>GitHub</span>
       </a>
+
+      {/* ⭐ Clickable Team Avatars */}
+      <div className="footer_avatars">
+        {team.map(member => (
+          <a
+            key={member.id}
+            href={member.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Visit ${member.name}'s GitHub`}
+          >
+            <img
+              src={base + member.image.replace("/Sk8erWise-website/", "")}
+              alt={member.name}
+            />
+          </a>
+        ))}
+      </div>
     </footer>
   )
 }

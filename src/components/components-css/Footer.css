@@ -25,3 +25,26 @@
 }
 .footer_github:hover { color: var(--volt); }
 .footer_github svg { display: block; }
+
+/* ============================================================
+   FOOTER AVATARS
+   ============================================================ */
+.footer_avatars {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.footer_avatars img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--volt);
+  transition: transform 0.2s ease;
+}
+
+.footer_avatars img:hover {
+  transform: scale(1.1);
+}
