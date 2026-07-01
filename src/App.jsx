@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -9,29 +8,6 @@ import About from "./pages/About.jsx";
 import Footer from "./components/Footer.jsx";
 
 export default function App() {
-
-  // ⚡ Volt Spark Trail Animation
-  useEffect(() => {
-    const handleMove = (e) => {
-      const spark = document.createElement("div");
-      spark.className = "spark";
-      spark.style.left = `${e.clientX}px`;
-      spark.style.top = `${e.clientY}px`;
-
-      document.body.appendChild(spark);
-
-      setTimeout(() => {
-        spark.remove();
-      }, 200);
-    };
-
-    window.addEventListener("mousemove", handleMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMove);
-    };
-  }, []);
-
   return (
     <div className="app">
       <Navbar />
