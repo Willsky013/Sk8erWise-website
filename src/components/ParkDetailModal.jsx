@@ -1,12 +1,17 @@
 import "./components-css/ParkDetailModal.css";
+import ImageSlider from "./ImageSlider";
 
 function ParkDetailModal({ park, onClose }) {
   if (!park) return null;
 
-  const image =
-    park.images?.[0]
-      ? `${import.meta.env.BASE_URL}${park.images[0].replace(/^\//, "")}`
-      : park.image;
+  // const image =
+  //   park.images?.[0]
+  //     ? `${import.meta.env.BASE_URL}${park.images[0].replace(/^\//, "")}`
+  //     : park.image;
+
+  const images = park.images?.map((img) => `${import.meta.env.BASE_URL}${img.replace(/^\//, "")}`) || [park.image];
+
+  console.log(images);
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -15,7 +20,7 @@ function ParkDetailModal({ park, onClose }) {
           ×
         </button>
 
-        {image && <img src={image} alt={park.name} />}
+        <ImageSlider images={images} />
 
         <h2>{park.name}</h2>
         <p>{park.description}</p>
