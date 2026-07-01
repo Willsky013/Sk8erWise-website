@@ -22,15 +22,15 @@ export default function PopularSkateparks({onParkClick}) {
        {/* show of the card and adds buttons for prev on the left sid and next on the right */}
 
       <div className="carousel">
-
-        <button
-          className="prev"
-          onClick={() => setStart((s) => Math.max(s - 1, 0))}
-        >
-          &#10094;
-        </button>
-
         <div className="cards">
+
+          <button
+            className="prev"
+            onClick={() => setStart((s) => Math.max(s - 1, 0))}
+          >
+            &#10094;
+          </button>
+
           {featuredParks[start] && (
             <ParkGrid 
               onParkClick={onParkClick}
@@ -38,19 +38,19 @@ export default function PopularSkateparks({onParkClick}) {
               parks={[featuredParks[start]]}
             />
           )}
+
+          <button
+            className="next"
+            onClick={() =>
+              setStart((s) =>
+                Math.min(s + 1, featuredParks.length - 1)
+              )
+            }
+          >
+            &#10095;
+          </button>
+
         </div>
-
-        <button
-          className="next"
-          onClick={() =>
-            setStart((s) =>
-              Math.min(s + 1, featuredParks.length - 1)
-            )
-          }
-        >
-          &#10095;
-        </button>
-
       </div>
 
       {/* Adds dots under the parkGrid showing how many the are in 'featuredParks' and the one your on */}
