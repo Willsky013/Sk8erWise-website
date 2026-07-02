@@ -1,73 +1,47 @@
 import "./components-css/ParkDetailModal.css";
 import ImageSlider from "./ImageSlider";
+import { X } from "lucide-react";
 
 function ParkDetailModal({ park, onClose }) {
   if (!park) return null;
 
   const images =
-    park.images?.map(
-      (img) => `${import.meta.env.BASE_URL}${img.replace(/^\//, "")}`
-    ) || [park.image];
-
+    park.images?.map((img) => `${import.meta.env.BASE_URL}${img.replace(/^\//, "")}`) ||
+    [park.image];
 
   return (
     <div className="modal-overlay" onClick={onClose}>
+      <div className="park-detail-modal" onClick={(e) => e.stopPropagation()}>
+        
+        {/* Close Button */}
+        <button className="modal-close-btn" onClick={onClose}>
+          <X size={26} />
+        </button>
 
-      <div 
-        className="park-detail-modal" 
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button 
-          className="modal-close-btn" 
-          onClick={onClose}
-        >×</button>
-
-        {/* IMAGE AREA */}
-        <div className="image-container">
+        {/* Image Carousel */}
+        <div className="modal-image-section">
           <ImageSlider images={images} />
         </div>
 
+        {/* Title */}
+        <h2 className="modal-title">{park.name}</h2>
 
-        {/* CONTENT */}
-        <div className="park-content">
+        {/* Description */}
+        <p className="modal-description">{park.description}</p>
 
-          <h2>{park.name}</h2>
-
-          <span className="location">
-            {park.city}, {park.country} 
-          </span>
-
-          <p className="description">{park.description}</p>
-
-          <h3>AMENITIES</h3>
-
-          <ul className="amenities">
-            {(park.amenities || []).map((item) => (
-              <li key={item}>
-                <span className="amenity-icon">
-                  ○
-                </span>
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          <div className="bottom-section">
-
-            <span className="difficulty">
-              {park.difficulty}
+        {/* Amenities */}
+        <h3 className="modal-subtitle">Amenities</h3>
+        <div className="amenities-container">
+          {(park.amenities || []).map((item) => (
+            <span key={item} className="amenity-chip">
+              {item}
             </span>
+          ))}
+        </div>
 
-            <div className="rating">
-
-              <span>
-                RATING:
-              </span>
-
-              ⭐ {park.rating}
-
-            </div>
-          </div>
+        {/* Rating */}
+        <div className="rating-box">
+          ⭐ <span>{park.rating}</span>
         </div>
       </div>
     </div>
