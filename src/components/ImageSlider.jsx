@@ -1,27 +1,72 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import './components-css/ImageSlider.css';
-import {ArrowBigLeft, ArrowBigRight} from 'lucide-react';
 
-export default function ImageSlider({ images }) {
-    const [currentIndex, setCurrentIndex] = useState(0);
+const ImageSlider = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    const nextImage = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-    };
+  // full-screen viewer state
+  const [expandedImage, setExpandedImage] = useState(null);
 
-    const prevImage = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-    };
-
-    return (
-        <div className="image-slider">
-            <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
-            <button className="slider-button" onClick={prevImage} style={{ left: 0 }}>
-                <ArrowBigLeft />
-            </button>
-            <button className="slider-button" onClick={nextImage} style={{ right: 0 }}>
-                <ArrowBigRight />
-            </button>
-        </div>
+  const goPrev = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? images.length - 1 : prev - 1
     );
-}
+  };
+
+  const goNext = () => {
+    setCurrentIndex((prev) =>
+      prev === images.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  return (
+    <>
+      {/* MAIN SLIDER */}
+      <div className={`image-slider ${expandedImage ? "no-bg" : ""}`}>
+        <button className="slider-button left" onClick={goPrev}>
+          <ChevronLeft size={20} />
+        </button>
+
+        <img
+          src={images[currentIndex]}
+          alt="Skatepark"
+          className="slider-image"
+          onClick={() => setExpandedImage(images[currentIndex])}
+        />
+
+        <button className="slider-button right" onClick={goNext}>
+          <ChevronRight size={20} />
+        </button>
+
+        <div className="slider-dots">
+          {images.map((_, index) => (
+            <div
+              key={index}
+              className={`dot ${index === currentIndex ? "active" : ""}`}
+              onClick={() => setCurrentIndex(index)}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* FULL-SCREEN IMAGE VIEWER */}
+      {expandedImage && (
+        <div
+          className="image-viewer-overlay"
+          onClick={() => setExpandedImage(null)}
+        >
+          <div className="image-viewer-box">
+            <img
+              src={expandedImage}
+              alt="Expanded view"
+              className="image-viewer-img"
+            />
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default ImageSlider;
