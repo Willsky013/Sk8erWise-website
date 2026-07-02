@@ -1,27 +1,36 @@
-/* ============================================================
-   ABOUT
-   ============================================================ */
-.about p { 
-    max-width: 680px; 
-    color: var(--muted); 
-    font-size: 1.05rem; 
-    text-align: left;
+/* ============================================================ 
+ABOUT
+============================================================ */
+.about p {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  text-align: left;
 }
 
 .about_cards {
-    display: grid;
-    grid-template-columns: repeat(3, 220px);
-    justify-content: center;
-    gap: 24px;
-    margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
 }
+
 .about_card {
-    width: 220px;
+  position: relative;
+  background: var(--concrete);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.4rem;
+  overflow: hidden;
+  transition: transform 0.22s ease, border-color 0.22s ease;
 }
+
 .about_card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 4px;
   background: var(--volt);
@@ -29,8 +38,16 @@
   transform-origin: left;
   transition: transform 0.3s ease;
 }
-.about_card:hover { transform: translateY(-4px); border-color: var(--volt); }
-.about_card:hover::before { transform: scaleX(1); }
+
+.about_card:hover {
+  transform: translateY(-4px);
+  border-color: var(--volt);
+}
+
+.about_card:hover::before {
+  transform: scaleX(1);
+}
+
 .about_card h3 {
   font-family: var(--sans);
   font-weight: 400;
@@ -38,13 +55,14 @@
   text-transform: uppercase;
   margin: 0 0 0.5rem;
 }
+
 .about_note {
   font-family: var(--heading);
   font-size: 0.82rem !important;
   color: var(--muted);
 }
 
-.about h1{
+.about h1 {
   font-family: var(--sans);
   font-weight: 400;
   text-transform: uppercase;

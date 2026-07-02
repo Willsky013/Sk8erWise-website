@@ -18,18 +18,21 @@
 
 .team_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(6, 110px);
   gap: 1.1rem;
+  justify-content: center;
 }
 
 .team_card {
-  background: var(--concrete);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.4rem;
-  transition: transform 0.22s ease, border-color 0.22s ease;
-  cursor: pointer;
-  text-decoration: none !important;
+  grid-column: span 2;
+}
+
+.team_card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.team_card:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 .team_card:hover {
