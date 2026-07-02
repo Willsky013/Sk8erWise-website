@@ -88,26 +88,45 @@
 .image-viewer-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.95); /* DARKER so nothing white shows */
+  z-index: 99999;
+
+  background: rgba(0, 0, 0, 0.95);
+
+  overflow: auto;
+
   display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 99999;
+
+  padding: 40px;
+  box-sizing: border-box;
+
   cursor: zoom-out;
 }
 
 .image-viewer-box {
-  max-width: 90%;
-  max-height: 90%;
+  margin: auto; /* This is the magic that centers the image */
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  min-width: fit-content;
+  min-height: fit-content;
 }
 
 .image-viewer-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;   /* show full image */
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 95vw;
+  max-height: 95vh;
+
+  min-width: 500px;
+  min-height: 300px;
+
+  object-fit: contain;
   border-radius: 12px;
 }
 
