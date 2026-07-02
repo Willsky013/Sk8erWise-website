@@ -3,7 +3,7 @@
     height: 20rem;
 }
 
-#popular-Skateparks h2 {
+#popular-Skateparks > h2 {
     text-align: center;
     margin-top: 1rem;
 }
