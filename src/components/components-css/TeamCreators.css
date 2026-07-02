@@ -19,7 +19,7 @@
 .team_grid {
   display: grid;
   grid-template-columns: repeat(6, 110px);
-  gap: 1.1rem;
+  gap: 2.5rem;
   justify-content: center;
 }
 
