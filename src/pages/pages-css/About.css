@@ -9,20 +9,14 @@
 }
 
 .about_cards {
-  display: grid;
-  grid-template-columns: repeat(3, 220px);
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    justify-content: center;
+    gap: 24px;
+    margin: 2rem 0;
 }
 .about_card {
-  position: relative;
-  background: var(--concrete);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.6rem 1.4rem;
-  overflow: hidden;
-  transition: transform 0.22s ease, border-color 0.22s ease;
+    width: 220px;
 }
 .about_card::before {
   content: '';
